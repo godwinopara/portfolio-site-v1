@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Ubuntu:wght@400;500;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr auto auto;
+  grid-gap: 10px;
+  margin: 5px auto;
+  margin-bottom: 0;
+  background: #1c1427;
+  color: #e4e4e4;
+  line-height: 1.2;
+}
+
+header {
+  grid-column: 3 / span 10;
+  border: 1px solid #3f3f3f;
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  grid-column: 3 / span 10;
+}
+
+footer {
+  background: yellow;
+  grid-column: 3 / span 10;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-section {
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 4;
+}
+
+header::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: url("/images/laptop .jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -10;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: auto;
+  z-index: 100;
+}
+
+.header-container ul {
+  display: flex;
+  margin-top: 20px;
+}
+
+.header-container ul a {
+  margin-right: 15px;
+  z-index: 200;
+}
+
+.header-container .logo {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-family: "Pacifico", cursive;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+}
+
+.header-description {
+  margin: 100px auto 200px auto;
+  color: white;
+}
+
+.header-description h2 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.header-description h4 {
+  margin: 5px 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.header-description p {
+  width: 40%;
+  margin: 10px 0 50px;
+  font-weight: 500;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  margin: 20px auto;
+}
+
+.services .service-grid {
+  height: 250px;
+  width: 90%;
+  border: 1px solid white;
+}
+
+.services .service-grid .service-grid-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+/*# sourceMappingURL=main.css.map */
