@@ -5,5 +5,5 @@ hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
 
 function toggleHamburgerMenu() {
 	hamburgerMenu.classList.toggle("show");
-	navLink.classList.toggle("show");
+	navLink.classList.toggle("show-nav");
 }

@@ -5,7 +5,7 @@ $secondary-font: "Montserrat", sans-serif;
 $secondary-color: #202040;
 $primary-color: #202060;
 $text-color: rgb(236, 236, 236);
-$span-color: #602080;
+$span-color: $primary-color;
 
 *,
 *::after,
@@ -98,6 +98,7 @@ header {
 .logo {
 	padding: 0.5em 1em;
 	background: $span-color;
+	height: 45px;
 
 	.logo-link {
 		color: $text-color;
@@ -111,7 +112,8 @@ header {
 	justify-content: space-between;
 	position: relative;
 
-	nav {
+	.show-nav {
+		display: block;
 		position: absolute;
 		right: 0;
 		left: 0;
@@ -146,10 +148,6 @@ header {
 				transition: 0.3s ease-in-out;
 			}
 		}
-	}
-
-	.show {
-		display: block;
 	}
 }
 
@@ -269,6 +267,12 @@ header {
 	padding: 1em 1.5em;
 	background: $text-color;
 
+	.about-content {
+		-webkit-box-shadow: 1px 9px 11px -7px $secondary-color;
+		box-shadow: 1px 9px 11px -7px $secondary-color;
+		padding: 2em;
+	}
+
 	h2 {
 		padding: 6rem 0 3rem;
 		text-align: center;
@@ -283,9 +287,6 @@ header {
 	}
 
 	&-description {
-		-webkit-box-shadow: 1px 9px 11px -7px $secondary-color;
-		box-shadow: 1px 9px 11px -7px $secondary-color;
-		padding: 2em;
 		p + p {
 			margin-top: 1rem;
 		}
@@ -301,9 +302,28 @@ header {
 		text-align: center;
 		margin-top: 2rem;
 
+		.icon-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 1rem;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+		}
+
+		h3 {
+			color: $secondary-color;
+			font-family: $secondary-font;
+			font-size: 1.7rem;
+			padding: 2rem 0;
+		}
+		strong {
+			color: $secondary-color;
+			font-size: 1.3rem;
+		}
+
 		i {
-			font-size: 4rem;
-			margin-right: 2rem;
+			font-size: 1.3rem;
 		}
 
 		.html {
@@ -385,7 +405,7 @@ header {
 ************ FOOTER STYLES******************** */
 
 footer {
-	background: $secondary-color;
+	background: $primary-color;
 	padding: 4em 1.5em 2em;
 	text-align: center;
 }
@@ -404,14 +424,6 @@ footer {
 
 @media screen and (min-width: 700px) {
 	.header-description {
-		h2 {
-			font-size: 2.5rem;
-		}
-
-		h4 {
-			font-size: 3.5rem;
-		}
-
 		input {
 			padding: 1em 2em;
 			margin: 1.5rem 1.5rem 1.5rem auto;
@@ -439,5 +451,85 @@ footer {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 0.5em;
 		padding: 0;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.about {
+		.about-content {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.about-description {
+			grid-column: span 2;
+		}
+		.skills {
+			.icon-container {
+				grid-template-columns: repeat(3, 1fr);
+			}
+
+			strong {
+				font-size: 1.5rem;
+			}
+			i {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	.hamburger-menu {
+		display: none;
+	}
+
+	nav {
+		display: block;
+
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			list-style: none;
+
+			li + li {
+				margin-left: 2rem;
+			}
+
+			a {
+				color: $secondary-color;
+				font-weight: 900;
+				font-size: 1.2rem;
+			}
+
+			li:hover {
+				transition: 0.5s ease-in-out;
+			}
+
+			.short-length-link::before {
+				content: "";
+				position: absolute;
+				top: -17px;
+				margin-left: 25px;
+				height: 20px;
+				width: 7px;
+				background: $primary-color;
+				display: none;
+			}
+
+			.long-length-link::before {
+				content: "";
+				position: absolute;
+				top: -17px;
+				margin-left: 39px;
+				height: 20px;
+				width: 7px;
+				background: $primary-color;
+				display: none;
+			}
+
+			.long-length-link:hover::before,
+			.short-length-link:hover::before {
+				display: block;
+			}
+		}
 	}
 }

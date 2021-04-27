@@ -18,7 +18,7 @@ body {
 }
 
 span {
-  color: #602080;
+  color: #202060;
 }
 
 /* **************************
@@ -82,7 +82,7 @@ header::after {
   transform: translate(-1px, -40px) rotate(-1deg);
   padding: 4rem;
   width: 100%;
-  background: #602080;
+  background: #202060;
 }
 
 header {
@@ -92,7 +92,8 @@ header {
 
 .logo {
   padding: 0.5em 1em;
-  background: #602080;
+  background: #202060;
+  height: 45px;
 }
 
 .logo .logo-link {
@@ -107,7 +108,8 @@ header {
   position: relative;
 }
 
-.header-container nav {
+.header-container .show-nav {
+  display: block;
   position: absolute;
   right: 0;
   left: 0;
@@ -118,7 +120,7 @@ header {
   text-align: center;
 }
 
-.header-container nav ul {
+.header-container .show-nav ul {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -126,11 +128,11 @@ header {
   align-items: center;
 }
 
-.header-container nav li {
+.header-container .show-nav li {
   list-style: none;
 }
 
-.header-container nav li a {
+.header-container .show-nav li a {
   display: block;
   margin: 0.8em auto;
   font-size: 1.3rem;
@@ -138,14 +140,10 @@ header {
   font-weight: 600;
 }
 
-.header-container nav li a:hover {
+.header-container .show-nav li a:hover {
   color: #575757;
   border-bottom: 2px solid #52c4fe;
   transition: 0.3s ease-in-out;
-}
-
-.header-container .show {
-  display: block;
 }
 
 /* ********** ************
@@ -175,7 +173,7 @@ header {
   padding: 1em 2em;
   margin: 1rem auto 0;
   border-radius: 5px;
-  background: #602080;
+  background: #202060;
   outline: none;
   border: none;
   color: #ececec;
@@ -263,6 +261,11 @@ header {
   background: #ececec;
 }
 
+.about .about-content {
+  box-shadow: 1px 9px 11px -7px #202040;
+  padding: 2em;
+}
+
 .about h2 {
   padding: 6rem 0 3rem;
   text-align: center;
@@ -274,11 +277,6 @@ header {
 .about-image {
   text-align: center;
   padding-bottom: 2rem;
-}
-
-.about-description {
-  box-shadow: 1px 9px 11px -7px #202040;
-  padding: 2em;
 }
 
 .about-description p + p {
@@ -296,9 +294,29 @@ header {
   margin-top: 2rem;
 }
 
+.about .skills .icon-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about .skills h3 {
+  color: #202040;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  padding: 2rem 0;
+}
+
+.about .skills strong {
+  color: #202040;
+  font-size: 1.3rem;
+}
+
 .about .skills i {
-  font-size: 4rem;
-  margin-right: 2rem;
+  font-size: 1.3rem;
 }
 
 .about .skills .html {
@@ -376,7 +394,7 @@ header {
 ******************************************
 ************ FOOTER STYLES******************** */
 footer {
-  background: #202040;
+  background: #202060;
   padding: 4em 1.5em 2em;
   text-align: center;
 }
@@ -395,12 +413,6 @@ footer {
 **********************************************************
 *******************MEDIA QUERY **************************** */
 @media screen and (min-width: 700px) {
-  .header-description h2 {
-    font-size: 2.5rem;
-  }
-  .header-description h4 {
-    font-size: 3.5rem;
-  }
   .header-description input {
     padding: 1em 2em;
     margin: 1.5rem 1.5rem 1.5rem auto;
@@ -423,6 +435,72 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5em;
     padding: 0;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .about .about-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about .about-description {
+    grid-column: span 2;
+  }
+  .about .skills .icon-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about .skills strong {
+    font-size: 1.5rem;
+  }
+  .about .skills i {
+    font-size: 2rem;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+  }
+  nav ul li + li {
+    margin-left: 2rem;
+  }
+  nav ul a {
+    color: #202040;
+    font-weight: 900;
+    font-size: 1.2rem;
+  }
+  nav ul li:hover {
+    transition: 0.5s ease-in-out;
+  }
+  nav ul .short-length-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 25px;
+    height: 20px;
+    width: 7px;
+    background: #202060;
+    display: none;
+  }
+  nav ul .long-length-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 39px;
+    height: 20px;
+    width: 7px;
+    background: #202060;
+    display: none;
+  }
+  nav ul .long-length-link:hover::before,
+  nav ul .short-length-link:hover::before {
+    display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */
