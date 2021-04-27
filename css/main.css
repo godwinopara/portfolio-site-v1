@@ -7,9 +7,18 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Courier New", "Courier Prime", monospace;
   line-height: 1.5;
+  color: #ececec;
+}
+
+span {
+  color: #602080;
 }
 
 /* **************************
@@ -25,6 +34,10 @@ a {
 
 img {
   max-width: 100%;
+}
+
+main {
+  background: #202040;
 }
 
 .linkedin:hover {
@@ -47,10 +60,45 @@ img {
 /* *****************************
 ********************************
 **********HEADER STYLES********* */
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url("/images/portfolio-img.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: translate(-1px, -40px) rotate(-1deg);
+  padding: 4rem;
+  width: 100%;
+  background: #602080;
+}
+
 header {
-  background: linear-gradient(#48b9f6, #52c4fe);
   padding: 1em 2em;
-  color: rgba(0, 0, 0, 0.8);
+  color: black;
+}
+
+.logo {
+  padding: 0.5em 1em;
+  background: #602080;
+}
+
+.logo .logo-link {
+  color: #ececec;
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 .header-container {
@@ -64,7 +112,7 @@ header {
   right: 0;
   left: 0;
   top: -17px;
-  background: white;
+  background: #ececec;
   width: 100%;
   height: 80vh;
   text-align: center;
@@ -100,16 +148,11 @@ header {
   display: block;
 }
 
-.logo a {
-  font-weight: 600;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 1.2rem;
-}
-
 /* ********** ************
 ******* HEADER CONTENT ***** */
 .header-description {
   margin: 5rem auto 5rem;
+  color: #2c2b2b;
 }
 
 .header-description p {
@@ -129,14 +172,20 @@ header {
 }
 
 .header-description input {
-  padding: 1.5em 3em;
-  margin: 1.5rem 1.5rem 1.5rem auto;
+  padding: 1em 2em;
+  margin: 1rem auto 0;
   border-radius: 5px;
-  background: #202020;
+  background: #602080;
   outline: none;
   border: none;
-  color: white;
+  color: #ececec;
   font-family: "Courier New", "Courier Prime", monospace;
+  font-size: 1rem;
+}
+
+.header-description .contact-input {
+  margin-bottom: 1rem;
+  padding: 1em 2.3em;
 }
 
 .header-description * {
@@ -146,6 +195,7 @@ header {
 .header-social-media i {
   margin-right: 0.7rem;
   cursor: pointer;
+  color: #202040;
 }
 
 /* ******************************************************
@@ -205,11 +255,78 @@ header {
   display: none;
 }
 
+/* *****************************************
+********************************************
+***********ABOUT ME STYLES *****************/
+.about {
+  padding: 1em 1.5em;
+  background: #ececec;
+}
+
+.about h2 {
+  padding: 6rem 0 3rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  color: #202040;
+}
+
+.about-image {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.about-description {
+  box-shadow: 1px 9px 11px -7px #202040;
+  padding: 2em;
+}
+
+.about-description p + p {
+  margin-top: 1rem;
+}
+
+.about-description p {
+  width: 90%;
+  margin: auto;
+  color: #202040;
+}
+
+.about .skills {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about .skills i {
+  font-size: 4rem;
+  margin-right: 2rem;
+}
+
+.about .skills .html {
+  color: #e34c26;
+}
+
+.about .skills .css {
+  color: #264de4;
+}
+
+.about .skills .js {
+  color: #f0db4f;
+}
+
+.about .skills .react {
+  color: #61dbfb;
+}
+
+.about .skills .sass {
+  color: #c69;
+}
+
 /* ************************************
 *********************************** 
 ******* SERVICES STYLES ***********/
 .services {
-  padding: 1em 1.5em;
+  margin-top: 2rem;
+  padding: 1em 1.5em 1em;
 }
 
 .services-container {
@@ -218,7 +335,8 @@ header {
 }
 
 .services-container > div {
-  background: #52c4fe;
+  background: #ececec;
+  color: black;
   margin: 1em auto;
   padding: 5em 0.5em;
   text-align: center;
@@ -258,7 +376,7 @@ header {
 ******************************************
 ************ FOOTER STYLES******************** */
 footer {
-  background: #52c4fe;
+  background: #202040;
   padding: 4em 1.5em 2em;
   text-align: center;
 }
@@ -278,10 +396,14 @@ footer {
 *******************MEDIA QUERY **************************** */
 @media screen and (min-width: 700px) {
   .header-description h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .header-description h4 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+  .header-description input {
+    padding: 1em 2em;
+    margin: 1.5rem 1.5rem 1.5rem auto;
   }
   .services {
     padding: 1em 0;

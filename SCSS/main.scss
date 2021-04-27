@@ -2,6 +2,10 @@
 
 $primary-font: "Courier New", "Courier Prime", monospace;
 $secondary-font: "Montserrat", sans-serif;
+$secondary-color: #202040;
+$primary-color: #202060;
+$text-color: rgb(236, 236, 236);
+$span-color: #602080;
 
 *,
 *::after,
@@ -10,10 +14,18 @@ $secondary-font: "Montserrat", sans-serif;
 	padding: 0;
 	box-sizing: border-box;
 }
+html {
+	overflow-x: hidden;
+}
 
 body {
 	font-family: "Courier New", "Courier Prime", monospace;
 	line-height: 1.5;
+	color: $text-color;
+}
+
+span {
+	color: $span-color;
 }
 
 /* **************************
@@ -30,6 +42,9 @@ a {
 
 img {
 	max-width: 100%;
+}
+main {
+	background: $secondary-color;
 }
 
 .linkedin:hover {
@@ -50,10 +65,45 @@ img {
 /* *****************************
 ********************************
 **********HEADER STYLES********* */
+header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-image: url("/images/portfolio-img.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: -1;
+	opacity: 0.3;
+}
+
+header::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	transform: translate(-1px, -40px) rotate(-1deg);
+	padding: 4rem;
+	width: 100%;
+	background: $span-color;
+}
+
 header {
-	background: linear-gradient(#48b9f6, #52c4fe);
 	padding: 1em 2em;
-	color: rgba(0, 0, 0, 0.8);
+	color: rgb(0, 0, 0);
+}
+
+.logo {
+	padding: 0.5em 1em;
+	background: $span-color;
+
+	.logo-link {
+		color: $text-color;
+		font-weight: 600;
+		font-size: 1.2rem;
+	}
 }
 
 .header-container {
@@ -66,7 +116,7 @@ header {
 		right: 0;
 		left: 0;
 		top: -17px;
-		background: white;
+		background: $text-color;
 		width: 100%;
 		height: 80vh;
 		text-align: center;
@@ -103,17 +153,12 @@ header {
 	}
 }
 
-.logo a {
-	font-weight: 600;
-	color: rgba(0, 0, 0, 0.8);
-	font-size: 1.2rem;
-}
-
 /* ********** ************
 ******* HEADER CONTENT ***** */
 
 .header-description {
 	margin: 5rem auto 5rem;
+	color: rgb(44, 43, 43);
 
 	p {
 		font-size: 1.2rem;
@@ -132,14 +177,19 @@ header {
 	}
 
 	input {
-		padding: 1.5em 3em;
-		margin: 1.5rem 1.5rem 1.5rem auto;
+		padding: 1em 2em;
+		margin: 1rem auto 0;
 		border-radius: 5px;
-		background: rgb(32, 32, 32);
+		background: $span-color;
 		outline: none;
 		border: none;
-		color: white;
+		color: $text-color;
 		font-family: $primary-font;
+		font-size: 1rem;
+	}
+	.contact-input {
+		margin-bottom: 1rem;
+		padding: 1em 2.3em;
 	}
 }
 
@@ -150,6 +200,7 @@ header {
 .header-social-media i {
 	margin-right: 0.7rem;
 	cursor: pointer;
+	color: #202040;
 }
 
 /* ******************************************************
@@ -210,12 +261,76 @@ header {
 	}
 }
 
+/* *****************************************
+********************************************
+***********ABOUT ME STYLES *****************/
+
+.about {
+	padding: 1em 1.5em;
+	background: $text-color;
+
+	h2 {
+		padding: 6rem 0 3rem;
+		text-align: center;
+		font-family: $secondary-font;
+		font-size: 1.7rem;
+		color: $secondary-color;
+	}
+
+	&-image {
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+
+	&-description {
+		-webkit-box-shadow: 1px 9px 11px -7px $secondary-color;
+		box-shadow: 1px 9px 11px -7px $secondary-color;
+		padding: 2em;
+		p + p {
+			margin-top: 1rem;
+		}
+
+		p {
+			width: 90%;
+			margin: auto;
+			color: $secondary-color;
+		}
+	}
+
+	.skills {
+		text-align: center;
+		margin-top: 2rem;
+
+		i {
+			font-size: 4rem;
+			margin-right: 2rem;
+		}
+
+		.html {
+			color: #e34c26;
+		}
+		.css {
+			color: #264de4;
+		}
+		.js {
+			color: #f0db4f;
+		}
+		.react {
+			color: #61dbfb;
+		}
+		.sass {
+			color: #c69;
+		}
+	}
+}
+
 /* ************************************
 *********************************** 
 ******* SERVICES STYLES ***********/
 
 .services {
-	padding: 1em 1.5em;
+	margin-top: 2rem;
+	padding: 1em 1.5em 1em;
 }
 
 .services-container {
@@ -224,7 +339,8 @@ header {
 }
 
 .services-container > div {
-	background: #52c4fe;
+	background: $text-color;
+	color: black;
 	margin: 1em auto;
 	padding: 5em 0.5em;
 	text-align: center;
@@ -269,7 +385,7 @@ header {
 ************ FOOTER STYLES******************** */
 
 footer {
-	background: #52c4fe;
+	background: $secondary-color;
 	padding: 4em 1.5em 2em;
 	text-align: center;
 }
@@ -289,11 +405,16 @@ footer {
 @media screen and (min-width: 700px) {
 	.header-description {
 		h2 {
-			font-size: 3rem;
+			font-size: 2.5rem;
 		}
 
 		h4 {
-			font-size: 4rem;
+			font-size: 3.5rem;
+		}
+
+		input {
+			padding: 1em 2em;
+			margin: 1.5rem 1.5rem 1.5rem auto;
 		}
 	}
 
