@@ -52,6 +52,10 @@ main {
   color: #e1306c;
 }
 
+.github:hover {
+  color: #202040;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -114,9 +118,9 @@ header {
   right: 0;
   left: 0;
   top: -17px;
-  background: #ececec;
+  background: #202060;
   width: 100%;
-  height: 80vh;
+  height: 90vh;
   text-align: center;
 }
 
@@ -134,15 +138,17 @@ header {
 
 .header-container .show-nav li a {
   display: block;
-  margin: 0.8em auto;
-  font-size: 1.3rem;
-  color: #00aaff;
+  margin: 1em auto;
+  font-size: 1.7rem;
+  color: #ececec;
   font-weight: 600;
 }
 
 .header-container .show-nav li a:hover {
-  color: #575757;
-  border-bottom: 2px solid #52c4fe;
+  background-color: #ececec;
+  padding: 0.3rem 3rem;
+  color: #202060;
+  border-radius: 4px;
   transition: 0.3s ease-in-out;
 }
 
@@ -158,7 +164,7 @@ header {
   margin-top: 1rem;
 }
 
-.header-description h2 {
+.header-description h3 {
   font-family: "Montserrat", sans-serif;
   margin-bottom: 0;
   font-size: 2rem;
@@ -169,16 +175,13 @@ header {
   font-family: "Montserrat", sans-serif;
 }
 
-.header-description input {
-  padding: 1em 2em;
-  margin: 1rem auto 0;
-  border-radius: 5px;
-  background: #202060;
-  outline: none;
-  border: none;
+.header-description .btn-container a {
+  display: inline-block;
   color: #ececec;
-  font-family: "Courier New", "Courier Prime", monospace;
-  font-size: 1rem;
+  background: #202060;
+  margin: 1rem auto;
+  padding: 0.9em 2em;
+  border-radius: 3px;
 }
 
 .header-description .contact-input {
@@ -209,7 +212,7 @@ header {
 .hamburger-large {
   height: 3px;
   width: 28px;
-  background-color: black;
+  background-color: #202060;
   margin-left: auto;
   margin-bottom: 0.2rem;
   border-radius: 5px;
@@ -218,7 +221,7 @@ header {
 .hamburger-medium {
   height: 3px;
   width: 28px;
-  background-color: black;
+  background-color: #202060;
   margin-left: auto;
   margin-bottom: 0.25rem;
   border-radius: 5px;
@@ -227,7 +230,7 @@ header {
 .hamburger-small {
   height: 3px;
   width: 28px;
-  background-color: black;
+  background-color: #202060;
   border-radius: 5px;
   margin-left: auto;
 }
@@ -239,14 +242,14 @@ header {
 .show .hamburger-large {
   transform: rotate(45deg) translate(12px, 2px);
   transition: 0.5s ease-in-out;
-  background-color: #52c4fe;
+  background-color: #ececec;
 }
 
 .show .hamburger-medium {
   transform: rotate(-45deg) translate(1px, 7px);
   width: 28px;
   transition: 0.5s ease-in-out;
-  background-color: #52c4fe;
+  background-color: #ececec;
 }
 
 .show .hamburger-small {
@@ -266,11 +269,28 @@ header {
   padding: 2em;
 }
 
+.about .about-button-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.about a {
+  display: block;
+  color: #ececec;
+  background: #202060;
+  margin: 1rem 0;
+  padding: 1em 2em;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 .about h2 {
-  padding: 6rem 0 3rem;
+  padding: 6rem 0 1rem;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   color: #202040;
 }
 
@@ -289,12 +309,24 @@ header {
   color: #202040;
 }
 
-.about .skills {
-  text-align: center;
-  margin-top: 2rem;
+.about-description strong {
+  color: #202060;
 }
 
-.about .skills .icon-container {
+.about .skills {
+  background: #202060;
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.about .skills .skills-content {
+  text-align: center;
+  padding-bottom: 3rem;
+  color: #ececec;
+}
+
+.about .skills .skills-content .icon-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
@@ -303,74 +335,40 @@ header {
   text-align: center;
 }
 
-.about .skills h3 {
-  color: #202040;
+.about .skills .skills-content h3 {
+  color: #ececec;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1rem;
   padding: 2rem 0;
 }
 
-.about .skills strong {
-  color: #202040;
-  font-size: 1.3rem;
+.about .skills .skills-content strong {
+  color: #ececec;
+  font-size: 1rem;
 }
 
-.about .skills i {
-  font-size: 1.3rem;
+.about .skills .skills-content i {
+  font-size: 1rem;
 }
 
-.about .skills .html {
+.about .skills .skills-content .html {
   color: #e34c26;
 }
 
-.about .skills .css {
+.about .skills .skills-content .css {
   color: #264de4;
 }
 
-.about .skills .js {
+.about .skills .skills-content .js {
   color: #f0db4f;
 }
 
-.about .skills .react {
+.about .skills .skills-content .react {
   color: #61dbfb;
 }
 
-.about .skills .sass {
+.about .skills .skills-content .sass {
   color: #c69;
-}
-
-/* ************************************
-*********************************** 
-******* SERVICES STYLES ***********/
-.services {
-  margin-top: 2rem;
-  padding: 1em 1.5em 1em;
-}
-
-.services-container {
-  max-width: 700px;
-  margin: auto;
-}
-
-.services-container > div {
-  background: #ececec;
-  color: black;
-  margin: 1em auto;
-  padding: 5em 0.5em;
-  text-align: center;
-  width: 70%;
-  border-radius: 5px;
-}
-
-.service-content h4 {
-  margin-bottom: 1em;
-}
-
-.services-title {
-  text-align: center;
-  margin: 1em auto;
-  font-size: 1.8rem;
-  font-family: "Montserrat", sans-serif;
 }
 
 /* ********************************************
@@ -388,6 +386,88 @@ header {
 .portfolio-title {
   text-align: center;
   margin-bottom: 1.5em;
+  font-size: 1.5rem;
+}
+
+/* *****************************************************
+********************************************************
+********************CONTACT PAGE*************************/
+.contact {
+  color: #202040;
+  padding: 2rem 0;
+  background: #ececec;
+}
+
+.contact-container {
+  width: 80%;
+  margin: auto;
+}
+
+.contact-description {
+  box-shadow: 3px 9px 11px -4px #202040;
+  padding: 1rem;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-details {
+  margin: 1rem auto;
+  padding: 1rem 0;
+  background: #202060;
+  color: #ececec;
+  text-align: center;
+}
+
+.contact-details p {
+  margin-bottom: 1rem;
+}
+
+.contact-details i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact .write-us {
+  margin-top: 5rem;
+}
+
+.contact .write-us label {
+  text-align: left;
+  display: block;
+}
+
+.contact .write-us input {
+  border: none;
+  border-bottom: 2px solid #202060;
+  width: 100%;
+  background: #ececec;
+  margin: 0 0 2rem;
+  outline: none;
+  padding: 0.5rem 0.5rem;
+}
+
+.contact .write-us textarea {
+  border: none;
+  border-bottom: 2px solid #202060;
+  background: #ececec;
+  width: 100%;
+  outline: none;
+  margin-top: 1rem;
+  min-height: 0.1rem;
+}
+
+.contact .write-us button {
+  padding: 1.3em 3em;
+  margin: 1.5rem 0;
+  background: #202060;
+  outline: none;
+  border: none;
+  color: #ececec;
+  border-radius: 3px;
 }
 
 /* *****************************************
@@ -417,40 +497,60 @@ footer {
     padding: 1em 2em;
     margin: 1.5rem 1.5rem 1.5rem auto;
   }
-  .services {
-    padding: 1em 0;
-  }
-  .services .services-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1.8em;
-    row-gap: 1em;
-  }
-  .services .services-container .service-grid {
-    margin: 0.5em 0.5em;
-    width: 100%;
-  }
   .project-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 0.5em;
     padding: 0;
   }
+  .about .about-button-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .about a {
+    margin: 1rem 2rem 1rem 0;
+    padding: 1em 2em;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (min-width: 800px) {
   .about .about-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2rem;
+  }
+  .about .about-button-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .about-image {
+    grid-column: span 2;
+  }
+  .about-image img {
+    height: 90%;
   }
   .about .about-description {
-    grid-column: span 2;
+    grid-column: span 3;
+  }
+  .about .about-description p {
+    font-size: 0.85rem;
+    width: 100%;
+  }
+  .about .skills {
+    grid-column: span 5;
   }
   .about .skills .icon-container {
     grid-template-columns: repeat(3, 1fr);
   }
+  .about .skills .skills-header h3 {
+    font-size: 1.4rem;
+  }
   .about .skills strong {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .about .skills i {
     font-size: 2rem;
@@ -467,8 +567,11 @@ footer {
     justify-content: center;
     list-style: none;
   }
+  nav ul li {
+    transition: 0.3s ease-in-out;
+  }
   nav ul li + li {
-    margin-left: 2rem;
+    margin-left: 3rem;
   }
   nav ul a {
     color: #202040;
@@ -476,9 +579,19 @@ footer {
     font-size: 1.2rem;
   }
   nav ul li:hover {
-    transition: 0.5s ease-in-out;
+    border-bottom: 4px solid #202060;
   }
-  nav ul .short-length-link::before {
+  nav ul .home-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 20px;
+    height: 20px;
+    width: 7px;
+    background: #202060;
+    display: none;
+  }
+  nav ul .about-link::before {
     content: "";
     position: absolute;
     top: -17px;
@@ -488,7 +601,17 @@ footer {
     background: #202060;
     display: none;
   }
-  nav ul .long-length-link::before {
+  nav ul .contact-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 36.5px;
+    height: 20px;
+    width: 7px;
+    background: #202060;
+    display: none;
+  }
+  nav ul .portfolio-link::before {
     content: "";
     position: absolute;
     top: -17px;
@@ -498,9 +621,77 @@ footer {
     background: #202060;
     display: none;
   }
-  nav ul .long-length-link:hover::before,
-  nav ul .short-length-link:hover::before {
+  nav ul .portfolio-link:hover::before,
+  nav ul .about-link:hover::before,
+  nav ul .home-link:hover::before,
+  nav ul .contact-link:hover::before {
     display: block;
+  }
+  .contact-container {
+    width: 100%;
+  }
+  .contact-description {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 4rem auto;
+  }
+  .contact-details {
+    margin: 0 auto;
+    padding: 3.2rem 0;
+    width: 100%;
+  }
+  .contact .write-us {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .about .about-description {
+    grid-column: span 3;
+  }
+  .about .about-description p {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .about h2 {
+    position: relative;
+  }
+  .about h2::after {
+    content: "";
+    height: 5px;
+    width: 60px;
+    background: #202060;
+    position: absolute;
+    top: 90.5%;
+    right: 50.5%;
+  }
+  .portfolio h2 {
+    position: relative;
+  }
+  .portfolio h2::after {
+    content: "";
+    height: 5px;
+    width: 93px;
+    background: #202060;
+    position: absolute;
+    top: 94%;
+    right: 37%;
+  }
+  .contact-title h2 {
+    position: relative;
+  }
+  .contact-title h2::after {
+    content: "";
+    height: 5px;
+    width: 100px;
+    background: #202060;
+    position: absolute;
+    top: 110%;
+    right: 48%;
   }
 }
 /*# sourceMappingURL=main.css.map */
