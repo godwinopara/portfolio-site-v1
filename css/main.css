@@ -211,6 +211,107 @@ footer .footer-content {
   }
 }
 
+.header-container {
+  position: relative;
+}
+
+.header-container nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  width: 100vw;
+  background: #0a1931;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: 0.5s ease-out;
+}
+
+.header-container nav ul {
+  list-style: none;
+}
+
+.header-container nav ul li + li {
+  margin-top: 2rem;
+}
+
+.header-container nav ul li {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.header-container nav ul li a {
+  color: #cfcfcf;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-container nav ul li a:hover {
+  background: #cfcfcf;
+  color: #0a1931;
+}
+
+.header-container .show-nav {
+  transform: translateY(0);
+  transition: 0.5s ease-in;
+}
+
+@media screen and (min-width: 800px) {
+  .header-container nav {
+    transform: translateY(0);
+    background: #cfcfcf;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 72vh;
+    width: 33%;
+    background: #cfcfcf;
+  }
+  .header-container nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+    margin-top: 5rem;
+    height: 100%;
+  }
+  .header-container nav ul li + li {
+    margin-top: 0.3rem;
+  }
+  .header-container nav ul li {
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+  }
+  .header-container nav ul li a {
+    color: #0a1931;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  .header-container nav ul li:hover a {
+    color: #cfcfcf;
+    background: #0a1931;
+  }
+  .header-container nav ul .contact-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 36.5px;
+    height: 20px;
+    width: 7px;
+    background: #cfcfcf;
+    display: none;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -250,10 +351,6 @@ img {
   margin: 0 auto;
 }
 
-nav {
-  display: none;
-}
-
 /* *****************************
 ********************************
 **********HEADER STYLES********* */
@@ -286,26 +383,13 @@ header {
 }
 
 .logo {
-  height: 45px;
   font-family: "Monoton", cursive;
-  width: 50%;
 }
 
 .logo .logo-link {
   color: #0a1931;
   font-weight: 400;
   font-size: 1.5rem;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.header-container .show-nav {
-  display: block;
 }
 
 /* ********** ************
@@ -364,10 +448,11 @@ header {
 ************ HAMBURGER MENU ***************** */
 .hamburger-menu {
   position: absolute;
-  top: 0;
-  right: 1.5em;
+  top: 25%;
+  right: 0;
   cursor: pointer;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-out;
+  z-index: 2000;
 }
 
 .hamburger-large {
@@ -458,6 +543,53 @@ header {
     font-size: 2.3rem;
   }
   .hamburger-menu {
+    display: none;
+  }
+  .header-container nav {
+    transform: translateY(0);
+    background: #cfcfcf;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 72vh;
+    width: 33%;
+    background: #cfcfcf;
+  }
+  .header-container nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style: none;
+    margin-top: 5rem;
+    height: 100%;
+  }
+  .header-container nav ul li + li {
+    margin-top: 0.3rem;
+  }
+  .header-container nav ul li {
+    padding: 0.5rem;
+    border-radius: 4px;
+    width: 100%;
+  }
+  .header-container nav ul li a {
+    color: #0a1931;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    padding: 0.5rem 1rem;
+  }
+  .header-container nav ul li:hover a {
+    color: #cfcfcf;
+    background: #0a1931;
+  }
+  .header-container nav ul .contact-link::before {
+    content: "";
+    position: absolute;
+    top: -17px;
+    margin-left: 36.5px;
+    height: 20px;
+    width: 7px;
+    background: #cfcfcf;
     display: none;
   }
 }
