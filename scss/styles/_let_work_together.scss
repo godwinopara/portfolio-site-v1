@@ -1,0 +1,31 @@
+.lets-work-together {
+	background: $primary-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3rem 0;
+
+	&-content {
+		margin: 0 auto;
+		color: black;
+
+		h3 {
+			margin: 2rem 0;
+			letter-spacing: 2px;
+			font-size: 1.2rem;
+		}
+
+		input {
+			text-align: center;
+			display: block;
+			margin: auto;
+			padding: 1rem 2rem;
+			cursor: pointer;
+			background: $secondary-color;
+			color: $primary-color;
+			border: none;
+			border-radius: 100px;
+			font-weight: 600;
+		}
+	}
+}
