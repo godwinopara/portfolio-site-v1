@@ -16,7 +16,7 @@
 		margin-bottom: 6rem;
 
 		img {
-			opacity: 0.4;
+			opacity: 0.5;
 		}
 
 		strong {
@@ -72,6 +72,81 @@
 			border: none;
 			font-size: 1rem;
 			font-weight: 600;
+		}
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.portfolio {
+		figure {
+			width: 80%;
+			margin: 5rem auto;
+			figcaption {
+				padding: 0 3rem;
+				transform: translateY(5%);
+				opacity: 0;
+
+				h3 {
+					font-size: 2.5rem;
+				}
+
+				p {
+					font-size: 1.3rem;
+					margin: 1rem 0 1.5rem;
+				}
+			}
+
+			strong {
+				display: block;
+			}
+		}
+
+		figure::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			height: 100%;
+			width: 0;
+			background: linear-gradient(180deg, $primary-color, $secondary-color);
+			background: black;
+			transform: translateX(1%);
+			transition: all 0.5s ease;
+			opacity: 0;
+		}
+
+		figure:hover figcaption {
+			transform: translateX(0);
+			opacity: 1;
+			transition: 0.5s ease-out;
+		}
+
+		figure:hover::before {
+			transform: translateY(0);
+			transition: all 0.3s ease-in;
+			opacity: 0.7;
+			width: 100%;
+		}
+		figure:hover strong {
+			opacity: 1;
+			transition: 0.5s ease-out;
+			transform: translateY(0);
+		}
+
+		.left-number {
+			position: absolute;
+			right: 0;
+			top: -15%;
+			font-size: 10rem;
+			opacity: 0;
+			transform: translateY(30%);
+		}
+		.right-number {
+			position: absolute;
+			left: 0;
+			top: -15%;
+			font-size: 10rem;
+			opacity: 0;
+			transform: translateY(30%);
 		}
 	}
 }

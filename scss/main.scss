@@ -118,12 +118,14 @@ header {
 	}
 
 	.btn-container {
+		position: relative;
+
 		a {
 			display: inline-block;
 			color: $secondary-color;
 			background: $primary-color;
 			margin: 1rem auto;
-			padding: 0.9em 2em;
+			padding: 0.9rem 2rem;
 			border-radius: 3px;
 		}
 	}
@@ -241,10 +243,9 @@ header {
 		}
 
 		.logo {
-			margin-top: 1rem;
-
 			.logo-link {
 				color: $primary-color;
+				margin-top: 1rem;
 			}
 		}
 	}
@@ -262,181 +263,4 @@ header {
 	.hamburger-menu {
 		display: none;
 	}
-	.header-container {
-		nav {
-			transform: translateY(0);
-			background: $primary-color;
-			position: absolute;
-			right: 0;
-			top: 0;
-			height: 72vh;
-			width: 33%;
-			background: $primary-color;
-
-			ul {
-				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				justify-content: center;
-				list-style: none;
-				margin-top: 5rem;
-				height: 100%;
-				li + li {
-					margin-top: 0.3rem;
-				}
-				li {
-					padding: 0.5rem;
-					border-radius: 4px;
-					width: 100%;
-					a {
-						color: $secondary-color;
-						font-size: 1.2rem;
-						margin-left: 2rem;
-						padding: 0.5rem 1rem;
-					}
-				}
-
-				li:hover a {
-					color: $primary-color;
-					background: $secondary-color;
-				}
-
-				.contact-link::before {
-					content: "";
-					position: absolute;
-					top: -17px;
-					margin-left: 36.5px;
-					height: 20px;
-					width: 7px;
-					background: $primary-color;
-					display: none;
-				}
-			}
-		}
-	}
 }
-
-// .project-container {
-// 		padding: 0 1.5em;
-
-// 		figure + figure {
-// 			margin-top: 8rem;
-// 		}
-
-// 		figure {
-// 			position: relative;
-// 			display: flex;
-// 			justify-content: center;
-// 			height: 5%;
-// 			width: 90%;
-// 			margin: auto;
-
-// 			img {
-// 				opacity: 0.5;
-// 				width: 100%;
-// 			}
-// 			strong {
-// 				display: block;
-// 			}
-
-// 			figcaption {
-// 				position: absolute;
-// 				top: 0;
-// 				margin: auto;
-// 				width: 90%;
-// 				height: 100%;
-// 				display: flex;
-// 				flex-direction: column;
-// 				justify-content: center;
-// 				margin: auto;
-// 				padding: 2rem 1rem;
-// 				transform: translateY(5%);
-// 				opacity: 1;
-
-// 				transition: 0.5s ease-in;
-
-// 				h3 {
-// 					font-size: 1.5rem;
-// 					color: $primary-color;
-// 					margin: 1rem 0;
-// 				}
-
-// 				input {
-// 					cursor: pointer;
-// 					padding: 0.7rem 1rem;
-// 					margin: 1rem 1rem 1rem 0;
-// 					border-radius: 2px;
-// 					border: none;
-// 					font-size: 1rem;
-// 					font-weight: 600;
-// 					background: $secondary-color;
-// 					color: $primary-color;
-// 				}
-
-// 				p {
-// 					font-size: 0.9rem;
-// 				}
-// 			}
-// 		}
-
-// 		figure::before {
-// 			content: "";
-// 			position: absolute;
-// 			top: 0;
-// 			height: 100%;
-// 			width: 5%;
-// 			background: linear-gradient(270deg, $primary-color, $secondary-color);
-// 			transform: translateX(-60%);
-// 			transition: 0.5s ease;
-// 			opacity: 0;
-// 		}
-
-// 		figure:hover figcaption {
-// 			transform: translateX(0);
-// 			opacity: 1;
-// 			transition: 0.5s ease-out;
-// 		}
-
-// 		figure:hover::before {
-// 			transform: translateY(0);
-// 			transition: 0.3s ease-in;
-// 			opacity: 0.7;
-// 			width: 100%;
-// 		}
-// 		figure:hover strong {
-// 			opacity: 1;
-// 			transition: 0.5s ease-out;
-// 			transform: translateY(0);
-// 		}
-// 	}
-
-// 	.project-container {
-// 		figure {
-// 			figcaption {
-// 				h3 {
-// 					font-size: 3rem;
-// 				}
-// 			}
-
-// 			.left-number {
-// 				position: absolute;
-// 				right: 0;
-// 				top: -15%;
-// 				font-size: 10rem;
-// 				opacity: 0;
-// 				transform: translateY(30%);
-// 			}
-// 			.right-number {
-// 				position: absolute;
-// 				left: 0;
-// 				top: -15%;
-// 				font-size: 10rem;
-// 				opacity: 0;
-// 				transform: translateY(30%);
-// 			}
-
-// 			figcaption.right-figcaption {
-// 				text-align: right;
-// 			}
-// 		}
-// 	}

@@ -29,3 +29,13 @@
 		}
 	}
 }
+
+@media screen and (min-width: 800px) {
+	.lets-work-together {
+		&-content {
+			h3 {
+				font-size: 1.7rem;
+			}
+		}
+	}
+}

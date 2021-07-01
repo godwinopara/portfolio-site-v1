@@ -19,7 +19,7 @@
 }
 
 .portfolio figure img {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .portfolio figure strong {
@@ -78,6 +78,72 @@
   font-weight: 600;
 }
 
+@media screen and (min-width: 800px) {
+  .portfolio figure {
+    width: 80%;
+    margin: 5rem auto;
+  }
+  .portfolio figure figcaption {
+    padding: 0 3rem;
+    transform: translateY(5%);
+    opacity: 0;
+  }
+  .portfolio figure figcaption h3 {
+    font-size: 2.5rem;
+  }
+  .portfolio figure figcaption p {
+    font-size: 1.3rem;
+    margin: 1rem 0 1.5rem;
+  }
+  .portfolio figure strong {
+    display: block;
+  }
+  .portfolio figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(180deg, #cfcfcf, #0a1931);
+    background: black;
+    transform: translateX(1%);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+  .portfolio figure:hover figcaption {
+    transform: translateX(0);
+    opacity: 1;
+    transition: 0.5s ease-out;
+  }
+  .portfolio figure:hover::before {
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+    opacity: 0.7;
+    width: 100%;
+  }
+  .portfolio figure:hover strong {
+    opacity: 1;
+    transition: 0.5s ease-out;
+    transform: translateY(0);
+  }
+  .portfolio .left-number {
+    position: absolute;
+    right: 0;
+    top: -15%;
+    font-size: 10rem;
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  .portfolio .right-number {
+    position: absolute;
+    left: 0;
+    top: -15%;
+    font-size: 10rem;
+    opacity: 0;
+    transform: translateY(30%);
+  }
+}
+
 .lets-work-together {
   background: #cfcfcf;
   display: flex;
@@ -108,6 +174,12 @@
   border: none;
   border-radius: 100px;
   font-weight: 600;
+}
+
+@media screen and (min-width: 800px) {
+  .lets-work-together-content h3 {
+    font-size: 1.7rem;
+  }
 }
 
 /* *****************************************
@@ -213,6 +285,7 @@ footer .footer-content {
 
 .header-container {
   position: relative;
+  padding-top: 1rem;
 }
 
 .header-container nav {
@@ -240,7 +313,6 @@ footer .footer-content {
 
 .header-container nav ul li {
   font-size: 1.8rem;
-  text-align: center;
 }
 
 .header-container nav ul li a {
@@ -275,7 +347,7 @@ footer .footer-content {
   .header-container nav ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     list-style: none;
     margin-top: 5rem;
@@ -288,12 +360,10 @@ footer .footer-content {
     padding: 0.5rem;
     border-radius: 4px;
     width: 100%;
-    text-align: left;
   }
   .header-container nav ul li a {
     color: #0a1931;
     font-size: 1.2rem;
-    margin-left: 2rem;
     padding: 0.5rem 1rem;
   }
   .header-container nav ul li:hover a {
@@ -420,12 +490,16 @@ header {
   color: white;
 }
 
+.header-description .btn-container {
+  position: relative;
+}
+
 .header-description .btn-container a {
   display: inline-block;
   color: #0a1931;
   background: #cfcfcf;
   margin: 1rem auto;
-  padding: 0.9em 2em;
+  padding: 0.9rem 2rem;
   border-radius: 3px;
 }
 
@@ -529,11 +603,9 @@ header {
     -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
   }
-  header .logo {
-    margin-top: 1rem;
-  }
   header .logo .logo-link {
     color: #cfcfcf;
+    margin-top: 1rem;
   }
   .header-description input {
     padding: 1em 2em;
@@ -543,53 +615,6 @@ header {
     font-size: 2.3rem;
   }
   .hamburger-menu {
-    display: none;
-  }
-  .header-container nav {
-    transform: translateY(0);
-    background: #cfcfcf;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 72vh;
-    width: 33%;
-    background: #cfcfcf;
-  }
-  .header-container nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    list-style: none;
-    margin-top: 5rem;
-    height: 100%;
-  }
-  .header-container nav ul li + li {
-    margin-top: 0.3rem;
-  }
-  .header-container nav ul li {
-    padding: 0.5rem;
-    border-radius: 4px;
-    width: 100%;
-  }
-  .header-container nav ul li a {
-    color: #0a1931;
-    font-size: 1.2rem;
-    margin-left: 2rem;
-    padding: 0.5rem 1rem;
-  }
-  .header-container nav ul li:hover a {
-    color: #cfcfcf;
-    background: #0a1931;
-  }
-  .header-container nav ul .contact-link::before {
-    content: "";
-    position: absolute;
-    top: -17px;
-    margin-left: 36.5px;
-    height: 20px;
-    width: 7px;
-    background: #cfcfcf;
     display: none;
   }
 }
