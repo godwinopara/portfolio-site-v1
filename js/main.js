@@ -1,5 +1,7 @@
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const navLink = document.querySelector("nav");
+const workTogetherContactBtn = document.querySelector("#work-together-contact-btn");
+const contact = document.querySelector(".contact");
 
 hamburgerMenu.addEventListener("click", toggleHamburgerMenu);
 
@@ -12,3 +14,7 @@ function toggleHamburgerMenu() {
 		document.documentElement.style.overflowY = "scroll";
 	}
 }
+
+workTogetherContactBtn.addEventListener("click", () => {
+	contact.classList.add("active");
+});

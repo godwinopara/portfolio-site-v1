@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
 .portfolio {
   padding: 5rem 0;
 }
@@ -10,12 +10,12 @@
   font-size: 1.8rem;
   font-weight: 400;
   letter-spacing: 3px;
-  font-family: "Monoton", cursive;
+  font-family: "Playfair Display", serif;
 }
 
 .portfolio figure {
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
 }
 
 .portfolio figure img {
@@ -39,6 +39,7 @@
 
 .portfolio figure figcaption h3 {
   font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
 }
 
 .portfolio figure figcaption p {
@@ -61,10 +62,6 @@
   margin-left: 1rem;
 }
 
-.portfolio figcaption.right-figcaption {
-  text-align: right;
-}
-
 .portfolio .view-more-projects {
   text-align: center;
 }
@@ -79,9 +76,15 @@
 }
 
 @media screen and (min-width: 800px) {
+  .portfolio .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    width: 100%;
+  }
   .portfolio figure {
-    width: 80%;
-    margin: 5rem auto;
+    width: 100%;
+    margin: 2rem auto;
   }
   .portfolio figure figcaption {
     padding: 0 3rem;
@@ -89,10 +92,10 @@
     opacity: 0;
   }
   .portfolio figure figcaption h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .portfolio figure figcaption p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 1rem 0 1.5rem;
   }
   .portfolio figure strong {
@@ -104,8 +107,7 @@
     top: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(180deg, #cfcfcf, #0a1931);
-    background: black;
+    background: linear-gradient(270deg, #cfcfcf, #0a1931);
     transform: translateX(1%);
     transition: all 0.5s ease;
     opacity: 0;
@@ -126,19 +128,11 @@
     transition: 0.5s ease-out;
     transform: translateY(0);
   }
-  .portfolio .left-number {
+  .portfolio strong {
     position: absolute;
     right: 0;
-    top: -15%;
-    font-size: 10rem;
-    opacity: 0;
-    transform: translateY(30%);
-  }
-  .portfolio .right-number {
-    position: absolute;
-    left: 0;
-    top: -15%;
-    font-size: 10rem;
+    top: -12%;
+    font-size: 5rem;
     opacity: 0;
     transform: translateY(30%);
   }
@@ -214,7 +208,7 @@ footer .footer-content {
 
 .footer-nav .footer-logo {
   margin-top: 2rem;
-  font-family: "Monoton", cursive;
+  font-family: "Playfair Display", serif;
   font-size: 1.7rem;
 }
 
@@ -240,6 +234,7 @@ footer .footer-content {
   cursor: pointer;
   font-size: 0.8rem;
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
 .footer-social-media a + a {
@@ -281,11 +276,13 @@ footer .footer-content {
   footer .footer-nav ul a {
     font-size: 0.8rem;
   }
+  footer .footer-social-media {
+    margin-bottom: 0;
+  }
 }
 
 .header-container {
   position: relative;
-  padding-top: 1rem;
 }
 
 .header-container nav {
@@ -295,12 +292,11 @@ footer .footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   background: #0a1931;
   z-index: 1000;
   transform: translateY(-100%);
-  transition: 0.5s ease-out;
 }
 
 .header-container nav ul {
@@ -334,41 +330,40 @@ footer .footer-content {
 }
 
 @media screen and (min-width: 800px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .header-container nav {
     transform: translateY(0);
-    background: #cfcfcf;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 72vh;
-    width: 33%;
-    background: #cfcfcf;
+    position: static;
+    height: 100%;
+    display: block;
   }
   .header-container nav ul {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     list-style: none;
-    margin-top: 5rem;
-    height: 100%;
+    margin-top: 0;
   }
   .header-container nav ul li + li {
-    margin-top: 0.3rem;
+    margin-top: 0;
   }
   .header-container nav ul li {
     padding: 0.5rem;
     border-radius: 4px;
     width: 100%;
+    font-size: 1rem;
   }
   .header-container nav ul li a {
-    color: #0a1931;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    color: #cfcfcf;
+    padding: 0.5rem;
   }
   .header-container nav ul li:hover a {
-    color: #cfcfcf;
-    background: #0a1931;
+    color: #0a1931;
+    background: #cfcfcf;
   }
   .header-container nav ul .contact-link::before {
     content: "";
@@ -380,6 +375,20 @@ footer .footer-content {
     background: #cfcfcf;
     display: none;
   }
+}
+
+.contact {
+  background: black;
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 2000;
+  transform: translateY(-100%);
+}
+
+.contact.active {
+  transform: translateY(0);
 }
 
 *,
@@ -395,7 +404,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   color: #ececec;
 }
@@ -434,32 +443,41 @@ header::before {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  background-image: url("/images/portfolio-img.jpg");
+  background-image: url("/images/fotis-fotopoulos-xQ2qynQ92xs-unsplash.jpg");
   background-position: center;
-  background-repeat: repeat;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-color: #0a1931;
   z-index: -1;
-  opacity: 0.2;
+  opacity: 1;
 }
 
 header {
-  padding: 1rem 0;
   color: black;
-  min-height: 95vh;
+  min-height: 100vh;
+}
+
+header .header-nav {
+  background: #0a1931;
+  padding: 0.5rem;
 }
 
 .header-social-media .social {
-  color: white;
+  color: #cfcfcf;
 }
 
 .logo {
-  font-family: "Monoton", cursive;
+  font-family: "Playfair Display", serif;
+  height: 100%;
+  width: 100%;
 }
 
 .logo .logo-link {
-  color: #0a1931;
+  color: #cfcfcf;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 0.3rem;
+  border-radius: 3px;
 }
 
 /* ********** ************
@@ -480,14 +498,17 @@ header {
 
 .header-description h4 {
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: bold;
   color: white;
-  font-family: "Monoton", cursive;
+  font-family: "Playfair Display", serif;
   letter-spacing: 2px;
 }
 
 .header-description em {
   color: white;
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2px;
 }
 
 .header-description .btn-container {
@@ -496,11 +517,17 @@ header {
 
 .header-description .btn-container a {
   display: inline-block;
-  color: #0a1931;
-  background: #cfcfcf;
+  color: #cfcfcf;
+  background: #0a1931;
   margin: 1rem auto;
   padding: 0.9rem 2rem;
   border-radius: 3px;
+}
+
+.header-description .btn-container span {
+  position: absolute;
+  top: 12px;
+  left: 110px;
 }
 
 .header-description .contact-input {
@@ -515,7 +542,7 @@ header {
 .header-social-media .social {
   margin-right: 0.7rem;
   cursor: pointer;
-  color: #0a1931;
+  color: white;
 }
 
 /* ******************************************************
@@ -532,7 +559,7 @@ header {
 .hamburger-large {
   height: 2px;
   width: 30px;
-  background-color: #0a1931;
+  background-color: #cfcfcf;
   margin-left: auto;
   margin-bottom: 0.2rem;
   border-radius: 5px;
@@ -541,7 +568,7 @@ header {
 .hamburger-medium {
   height: 2px;
   width: 30px;
-  background-color: #0a1931;
+  background-color: #cfcfcf;
   margin-left: auto;
   margin-bottom: 0.25rem;
   border-radius: 5px;
@@ -550,7 +577,7 @@ header {
 .hamburger-small {
   height: 2px;
   width: 30px;
-  background-color: #0a1931;
+  background-color: #cfcfcf;
   border-radius: 5px;
   margin-left: auto;
 }
@@ -581,38 +608,23 @@ header {
 *******************MEDIA QUERY **************************** */
 @media screen and (max-width: 799px) {
   .header-description h4 {
-    font-size: 2.5rem;
-    color: #0a1931;
-  }
-  .header-description em {
-    color: #0a1931;
-  }
-  .header-description .btn-container a {
-    background: #0a1931;
-    color: #cfcfcf;
+    font-size: 2.2rem;
   }
 }
 
 @media screen and (min-width: 800px) {
-  header .portfolio-hero {
-    background: #0a1931;
-    padding-left: 2rem;
-    border-radius: 5px;
-    position: relative;
-    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-    -webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-  }
-  header .logo .logo-link {
-    color: #cfcfcf;
-    margin-top: 1rem;
+  .header-description {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
   .header-description input {
     padding: 1em 2em;
     margin: 1.5rem 1.5rem 1.5rem auto;
   }
-  .header-description h4 {
-    font-size: 2.3rem;
+  .header-description .header-social-media {
+    display: flex;
+    flex-direction: column;
   }
   .hamburger-menu {
     display: none;

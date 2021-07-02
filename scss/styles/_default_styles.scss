@@ -1,6 +1,7 @@
-$primary-font: "Courier New", "Courier Prime", monospace;
-$secondary-font: "Montserrat", sans-serif;
-$heading-font: "Monoton", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
+
+$secondary-font: "Roboto", sans-serif;
+$heading-font: "Playfair Display", serif;
 $secondary-color: #0a1931;
 $primary-color: #cfcfcf;
 $text-color: rgb(236, 236, 236);

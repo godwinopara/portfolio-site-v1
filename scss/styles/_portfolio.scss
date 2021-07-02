@@ -13,7 +13,7 @@
 
 	figure {
 		position: relative;
-		margin-bottom: 6rem;
+		margin-bottom: 5rem;
 
 		img {
 			opacity: 0.5;
@@ -35,6 +35,7 @@
 
 			h3 {
 				font-size: 1.3rem;
+				font-family: $heading-font;
 			}
 
 			p {
@@ -59,9 +60,6 @@
 		}
 	}
 
-	figcaption.right-figcaption {
-		text-align: right;
-	}
 	.view-more-projects {
 		text-align: center;
 
@@ -78,20 +76,26 @@
 
 @media screen and (min-width: 800px) {
 	.portfolio {
+		.project-container {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: 2rem;
+			width: 100%;
+		}
 		figure {
-			width: 80%;
-			margin: 5rem auto;
+			width: 100%;
+			margin: 2rem auto;
 			figcaption {
 				padding: 0 3rem;
 				transform: translateY(5%);
 				opacity: 0;
 
 				h3 {
-					font-size: 2.5rem;
+					font-size: 2rem;
 				}
 
 				p {
-					font-size: 1.3rem;
+					font-size: 1rem;
 					margin: 1rem 0 1.5rem;
 				}
 			}
@@ -107,8 +111,7 @@
 			top: 0;
 			height: 100%;
 			width: 0;
-			background: linear-gradient(180deg, $primary-color, $secondary-color);
-			background: black;
+			background: linear-gradient(270deg, $primary-color, $secondary-color);
 			transform: translateX(1%);
 			transition: all 0.5s ease;
 			opacity: 0;
@@ -132,19 +135,11 @@
 			transform: translateY(0);
 		}
 
-		.left-number {
+		strong {
 			position: absolute;
 			right: 0;
-			top: -15%;
-			font-size: 10rem;
-			opacity: 0;
-			transform: translateY(30%);
-		}
-		.right-number {
-			position: absolute;
-			left: 0;
-			top: -15%;
-			font-size: 10rem;
+			top: -12%;
+			font-size: 5rem;
 			opacity: 0;
 			transform: translateY(30%);
 		}

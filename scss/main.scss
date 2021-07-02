@@ -1,13 +1,13 @@
 @import "./partials/partial";
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat:wght@700;800;900&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
-$primary-font: "Courier New", "Courier Prime", monospace;
-$secondary-font: "Montserrat", sans-serif;
-$heading-font: "Monoton", cursive;
-$secondary-color: #0a1931;
-$primary-color: #cfcfcf;
-$text-color: rgb(236, 236, 236);
+// $primary-font: "Courier New", "Courier Prime", monospace;
+// $secondary-font: "Montserrat", sans-serif;
+// $heading-font: "Monoton", cursive;
+// $secondary-color: #0a1931;
+// $primary-color: white;
+// $text-color: rgb(236, 236, 236);
 
 *,
 *::after,
@@ -61,31 +61,39 @@ header::before {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	background-image: url("/images/portfolio-img.jpg");
+	background-image: url("/images/fotis-fotopoulos-xQ2qynQ92xs-unsplash.jpg");
 	background-position: center;
-	background-repeat: repeat;
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: $secondary-color;
 	z-index: -1;
-	opacity: 0.2;
+	opacity: 1;
 }
 
 header {
-	padding: 1rem 0;
 	color: rgb(0, 0, 0);
-	min-height: 95vh;
+	min-height: 100vh;
+
+	.header-nav {
+		background: $secondary-color;
+		padding: 0.5rem;
+	}
 }
 
 .header-social-media .social {
-	color: white;
+	color: $primary-color;
 }
 
 .logo {
 	font-family: $heading-font;
-
+	height: 100%;
+	width: 100%;
 	.logo-link {
-		color: $secondary-color;
+		color: $primary-color;
 		font-weight: 400;
-		font-size: 1.5rem;
+		font-size: 2rem;
+		padding: 0.3rem;
+		border-radius: 3px;
 	}
 }
 
@@ -107,7 +115,7 @@ header {
 
 	h4 {
 		font-size: 3rem;
-		font-weight: 500;
+		font-weight: bold;
 		color: white;
 		font-family: $heading-font;
 		letter-spacing: 2px;
@@ -115,18 +123,26 @@ header {
 
 	em {
 		color: white;
+		font-size: 1.2rem;
+		// font-weight: bold;
+		font-family: $secondary-font;
+		letter-spacing: 2px;
 	}
 
 	.btn-container {
 		position: relative;
-
 		a {
 			display: inline-block;
-			color: $secondary-color;
-			background: $primary-color;
+			color: $primary-color;
+			background: $secondary-color;
 			margin: 1rem auto;
 			padding: 0.9rem 2rem;
 			border-radius: 3px;
+		}
+		span {
+			position: absolute;
+			top: 12px;
+			left: 110px;
 		}
 	}
 
@@ -144,7 +160,7 @@ header {
 	.social {
 		margin-right: 0.7rem;
 		cursor: pointer;
-		color: $secondary-color;
+		color: white;
 	}
 }
 
@@ -163,7 +179,7 @@ header {
 .hamburger-large {
 	height: 2px;
 	width: 30px;
-	background-color: $secondary-color;
+	background-color: $primary-color;
 	margin-left: auto;
 	margin-bottom: 0.2rem;
 	border-radius: 5px;
@@ -172,7 +188,7 @@ header {
 .hamburger-medium {
 	height: 2px;
 	width: 30px;
-	background-color: $secondary-color;
+	background-color: $primary-color;
 	margin-left: auto;
 	margin-bottom: 0.25rem;
 	border-radius: 5px;
@@ -181,7 +197,7 @@ header {
 .hamburger-small {
 	height: 2px;
 	width: 30px;
-	background-color: $secondary-color;
+	background-color: $primary-color;
 	border-radius: 5px;
 	margin-left: auto;
 }
@@ -213,51 +229,29 @@ header {
 @media screen and (max-width: 799px) {
 	.header-description {
 		h4 {
-			font-size: 2.5rem;
-			color: $secondary-color;
-		}
-
-		em {
-			color: $secondary-color;
-		}
-
-		.btn-container {
-			a {
-				background: $secondary-color;
-				color: $primary-color;
-			}
+			font-size: 2.2rem;
 		}
 	}
 }
 
 @media screen and (min-width: 800px) {
-	header {
-		.portfolio-hero {
-			background: $secondary-color;
-			padding-left: 2rem;
-			border-radius: 5px;
-			position: relative;
-			box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-			-webkit-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-			-moz-box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
-		}
-
-		.logo {
-			.logo-link {
-				color: $primary-color;
-				margin-top: 1rem;
-			}
-		}
-	}
-
 	.header-description {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+
 		input {
 			padding: 1em 2em;
 			margin: 1.5rem 1.5rem 1.5rem auto;
 		}
 
-		h4 {
-			font-size: 2.3rem;
+		// h4 {
+		// 	font-size: 2.5rem;
+		// }
+
+		.header-social-media {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 	.hamburger-menu {
