@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Roboto&display=swap");
 .portfolio {
   padding: 5rem 0;
 }
@@ -54,7 +55,7 @@
   border: none;
   font-size: 1rem;
   font-weight: 500;
-  background: #cfcfcf;
+  background: #fff;
   color: #0a1931;
 }
 
@@ -68,7 +69,8 @@
 
 .portfolio .view-more-projects input {
   cursor: pointer;
-  padding: 0.5rem 1.5rem;
+  padding: 1.5rem 1.7rem;
+  margin-top: 3rem;
   border-radius: 2px;
   border: none;
   font-size: 1rem;
@@ -107,7 +109,7 @@
     top: 0;
     height: 100%;
     width: 0;
-    background: linear-gradient(270deg, #cfcfcf, #0a1931);
+    background: linear-gradient(270deg, #fff, #0a1931);
     transform: translateX(1%);
     transition: all 0.5s ease;
     opacity: 0;
@@ -139,40 +141,47 @@
 }
 
 .lets-work-together {
-  background: #cfcfcf;
+  background: #fff;
+  background-image: url("/images/christina-wocintechchat-com-OtHEYbQXLFU-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 3rem 0;
+  min-height: 70vh;
 }
 
 .lets-work-together-content {
-  margin: 0 auto;
-  color: black;
+  color: #0a1931;
 }
 
 .lets-work-together-content h3 {
   margin: 2rem 0;
   letter-spacing: 2px;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-family: "Playfair Display", serif;
 }
 
 .lets-work-together-content input {
-  text-align: center;
   display: block;
-  margin: auto;
   padding: 1rem 2rem;
   cursor: pointer;
   background: #0a1931;
-  color: #cfcfcf;
+  color: #fff;
   border: none;
-  border-radius: 100px;
   font-weight: 600;
 }
 
 @media screen and (min-width: 800px) {
+  .lets-work-together-content input {
+    padding: 1.5rem 2rem;
+    font-size: 1.2rem;
+  }
   .lets-work-together-content h3 {
-    font-size: 1.7rem;
+    letter-spacing: 5px;
+    font-size: 2.5rem;
   }
 }
 
@@ -188,7 +197,7 @@ footer {
 }
 
 footer a {
-  color: #cfcfcf;
+  color: #fff;
 }
 
 footer .footer-content {
@@ -213,7 +222,7 @@ footer .footer-content {
 }
 
 .footer-nav .footer-logo a {
-  color: #cfcfcf;
+  color: #fff;
   font-size: 1.8rem;
 }
 
@@ -230,6 +239,10 @@ footer .footer-content {
   font-size: 0.9rem;
 }
 
+.footer-nav ul a:hover {
+  border-bottom: 1px solid #fff;
+}
+
 .footer-social-media {
   cursor: pointer;
   font-size: 0.8rem;
@@ -239,6 +252,14 @@ footer .footer-content {
 
 .footer-social-media a + a {
   margin-left: 1rem;
+}
+
+.footer-social-media a {
+  font-size: 1rem;
+}
+
+.footer-social-media a:hover {
+  border-bottom: 1px solid #fff;
 }
 
 .copy-write {
@@ -274,7 +295,7 @@ footer .footer-content {
     margin-left: 1rem;
   }
   footer .footer-nav ul a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   footer .footer-social-media {
     margin-bottom: 0;
@@ -312,7 +333,7 @@ footer .footer-content {
 }
 
 .header-container nav ul li a {
-  color: #cfcfcf;
+  color: #fff;
   padding: 1rem;
   display: flex;
   align-items: center;
@@ -320,7 +341,7 @@ footer .footer-content {
 }
 
 .header-container nav ul li a:hover {
-  background: #cfcfcf;
+  background: #fff;
   color: #0a1931;
 }
 
@@ -358,12 +379,12 @@ footer .footer-content {
     font-size: 1rem;
   }
   .header-container nav ul li a {
-    color: #cfcfcf;
+    color: #fff;
     padding: 0.5rem;
   }
   .header-container nav ul li:hover a {
     color: #0a1931;
-    background: #cfcfcf;
+    background: #fff;
   }
   .header-container nav ul .contact-link::before {
     content: "";
@@ -372,23 +393,201 @@ footer .footer-content {
     margin-left: 36.5px;
     height: 20px;
     width: 7px;
-    background: #cfcfcf;
+    background: #fff;
     display: none;
   }
 }
 
-.contact {
-  background: black;
+.contact-description {
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  z-index: 2000;
-  transform: translateY(-100%);
+  z-index: -1;
 }
 
-.contact.active {
-  transform: translateY(0);
+.contact-description h2 {
+  letter-spacing: 2px;
+  margin: 1.5rem 0;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.contact-description .contact-details {
+  background: #fff;
+  transform: translate3d(-100%, 0, 0);
+  height: 100%;
+  width: 100%;
+  order: 1;
+  color: #0a1931;
+  transition: 0.5s ease-out;
+}
+
+.contact-description .contact-details-content {
+  width: 92%;
+  margin: auto;
+}
+
+.contact-description .contact-details p {
+  margin: 1rem 0;
+}
+
+.contact-description .contact-details hr {
+  border: 1px solid #0a1931;
+  margin: 2rem 0;
+}
+
+.contact-description .contact-details .contact-icon-details {
+  background: #0a1931;
+  color: #fff;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-description .contact-details .contact-icon-details .icon {
+  font-size: 1.5rem;
+}
+
+.contact-description .contact-details .contact-icon-details p {
+  font-size: 1.1rem;
+  margin: 0.8rem 0;
+}
+
+.contact-description .contact-details .contact-icon-details .location,
+.contact-description .contact-details .contact-icon-details .telephone {
+  margin-bottom: 2rem;
+}
+
+.contact-description .contact-details .contact-icon-details .contact-social-media {
+  margin-top: 2rem;
+}
+
+.contact-description .contact-details .contact-icon-details .contact-social-media .social + .social {
+  margin-left: 2rem;
+}
+
+.contact-description .contact-details .contact-icon-details .contact-social-media .social {
+  cursor: pointer;
+}
+
+.contact-description .contact-form {
+  background: #0a1931;
+  transform: translate3d(100%, 0, 0);
+  height: 100%;
+  width: 100%;
+  order: 0;
+  padding: 1rem;
+  transition: 1s ease-in-out;
+}
+
+.contact-description .contact-form-content {
+  width: 92%;
+  margin: auto;
+}
+
+.contact-description .contact-form label {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+
+.contact-description .contact-form input {
+  width: 100%;
+  outline: none;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  padding: 0.5rem 0 1rem 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-description .contact-form textarea {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.5rem 0 1rem 0.5rem;
+}
+
+.contact-description .contact-form button {
+  padding: 0.8rem 3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #0a1931;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.contact-description .close-icon {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+}
+
+.contact-description .close-icon img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.contact-description.show-contact {
+  z-index: 2000;
+  overflow-y: scroll;
+}
+
+.contact-description.show-contact .contact-form,
+.contact-description.show-contact .contact-details {
+  transform: translate3d(0, 0, 0);
+  transition: 0.5s ease-in;
+}
+
+@media screen and (min-width: 800px) {
+  .contact-description {
+    position: fixed;
+    top: 52%;
+    left: 50%;
+    height: 100%;
+    width: 90%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+  .contact-description .contact-details,
+  .contact-description .contact-form {
+    height: 95%;
+    width: 48%;
+  }
+  .contact-description .contact-details-content,
+  .contact-description .contact-form-content {
+    width: 80%;
+    margin: auto;
+  }
+  .contact-description .contact-form {
+    transform: translateY(120%);
+    transition: all 0.3s ease-out;
+    order: 1;
+  }
+  .contact-description .contact-details {
+    transform: translateY(-120%);
+    transition: all 0.3s ease-out;
+    order: 0;
+  }
+  .contact-description .contact-details p {
+    font-size: 1.2rem;
+  }
+  .contact-description.show-contact {
+    z-index: 2000;
+    overflow: hidden;
+  }
+  .contact-description.show-contact .contact-form,
+  .contact-description.show-contact .contact-details {
+    transform: translateY(0);
+    transition: 0.5s all ease-out;
+  }
 }
 
 *,
@@ -425,7 +624,7 @@ img {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 980px;
   width: 93%;
   margin: 0 auto;
 }
@@ -463,7 +662,7 @@ header .header-nav {
 }
 
 .header-social-media .social {
-  color: #cfcfcf;
+  color: #fff;
 }
 
 .logo {
@@ -473,7 +672,7 @@ header .header-nav {
 }
 
 .logo .logo-link {
-  color: #cfcfcf;
+  color: #fff;
   font-weight: 400;
   font-size: 2rem;
   padding: 0.3rem;
@@ -517,7 +716,7 @@ header .header-nav {
 
 .header-description .btn-container a {
   display: inline-block;
-  color: #cfcfcf;
+  color: #fff;
   background: #0a1931;
   margin: 1rem auto;
   padding: 0.9rem 2rem;
@@ -552,55 +751,37 @@ header .header-nav {
   top: 25%;
   right: 0;
   cursor: pointer;
-  transition: 0.5s ease-out;
+  transition: 0.3s ease-out;
   z-index: 2000;
+  display: flex;
 }
 
-.hamburger-large {
-  height: 2px;
-  width: 30px;
-  background-color: #cfcfcf;
-  margin-left: auto;
-  margin-bottom: 0.2rem;
-  border-radius: 5px;
+.hamburger {
+  transition: transform 0.3s ease-in;
+  visibility: visible;
+  transform: translateX(0);
 }
 
-.hamburger-medium {
-  height: 2px;
-  width: 30px;
-  background-color: #cfcfcf;
-  margin-left: auto;
-  margin-bottom: 0.25rem;
-  border-radius: 5px;
-}
-
-.hamburger-small {
-  height: 2px;
-  width: 30px;
-  background-color: #cfcfcf;
-  border-radius: 5px;
-  margin-left: auto;
+.hamburger-close {
+  transform: translateX(150%);
+  transition: transform 0.3s ease-in;
+  visibility: hidden;
 }
 
 .show {
-  transform: rotate(360deg);
+  transition: 0.5s ease-in;
 }
 
-.show .hamburger-large {
-  transform: rotate(45deg) translate(12px, 2px);
-  transition: 0.5s ease-in-out;
-  background-color: #cfcfcf;
+.show .hamburger {
+  transform: translateX(150%);
+  visibility: hidden;
 }
 
-.show .hamburger-medium {
-  transform: rotate(-45deg) translate(1px, 7px);
-  width: 28px;
-  transition: 0.5s ease-in-out;
-  background-color: #cfcfcf;
-}
-
-.show .hamburger-small {
-  display: none;
+.show .hamburger-close {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in;
+  visibility: visible;
+  display: block;
 }
 
 /* *********************************************************
