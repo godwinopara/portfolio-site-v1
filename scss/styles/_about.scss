@@ -1,12 +1,10 @@
 @import "./default_styles";
 .about {
 	padding-bottom: 10rem;
-	.about-img {
-	}
 
 	&-description {
 		.about-title {
-			margin: 3rem 0;
+			margin: 2rem 0;
 			font-size: 1rem;
 			color: $gold-color;
 			position: relative;
@@ -21,6 +19,16 @@
 			left: 0;
 			top: 10px;
 			background: $gold-color;
+		}
+		h2 {
+			font-size: 2rem;
+			margin-bottom: 2rem;
+			letter-spacing: 5px;
+			font-family: $heading-font;
+		}
+
+		span {
+			color: $gold-color;
 		}
 
 		p {
@@ -55,7 +63,20 @@
 		padding-top: 10rem;
 		&-content {
 			.skills-header {
-				padding-bottom: 3rem;
+				padding-bottom: 2rem;
+				padding-left: 3rem;
+				position: relative;
+				color: $gold-color;
+			}
+
+			.skills-header::before {
+				content: "";
+				position: absolute;
+				height: 1px;
+				width: 2rem;
+				left: 0;
+				top: 10px;
+				background: $gold-color;
 			}
 			.skills-container {
 				display: grid;
@@ -106,6 +127,23 @@
 
 @media screen and (min-width: 900px) {
 	.about {
+		.flex {
+			display: flex;
+
+			figure {
+				width: 40%;
+			}
+
+			.about-description {
+				width: 40%;
+				margin-left: 5rem;
+
+				.about-title {
+					margin-top: 0;
+				}
+			}
+		}
+
 		.skills {
 			&-content {
 				.skills-container {

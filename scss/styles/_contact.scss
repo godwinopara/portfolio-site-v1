@@ -18,7 +18,7 @@
 	}
 
 	.contact-details {
-		background: $primary-color;
+		background: $gold-color;
 		transform: translate3d(-100%, 0, 0);
 		height: 100%;
 		width: 100%;
@@ -42,8 +42,8 @@
 
 		.contact-icon-details {
 			background: $secondary-color;
-			color: $primary-color;
-			padding: 2rem;
+			color: $text-color;
+			padding: 1rem;
 			margin-bottom: 1rem;
 
 			.icon {
@@ -51,7 +51,7 @@
 			}
 
 			p {
-				font-size: 1.1rem;
+				font-size: 1rem;
 				margin: 0.8rem 0;
 			}
 
@@ -64,6 +64,7 @@
 				p {
 					margin-left: 1rem;
 					letter-spacing: 1px;
+					width: 90%;
 				}
 			}
 
@@ -77,7 +78,7 @@
 					cursor: pointer;
 				}
 				.social:hover {
-					opacity: 0.5;
+					color: $gold-color;
 				}
 			}
 		}
@@ -104,9 +105,9 @@
 		input {
 			width: 100%;
 			outline: none;
-			border: 1px solid $primary-color;
+			border: 1px solid $gold-color;
 			background: transparent;
-			color: $primary-color;
+			color: $text-color;
 			padding: 0.5rem 0 1rem 0.5rem;
 			margin-bottom: 2rem;
 		}
@@ -115,8 +116,8 @@
 			width: 100%;
 			background: transparent;
 			outline: none;
-			border: 1px solid $primary-color;
-			color: $primary-color;
+			border: 1px solid $gold-color;
+			color: $text-color;
 			padding: 0.5rem 0 1rem 0.5rem;
 		}
 
@@ -128,7 +129,9 @@
 			margin: 1rem 0;
 			cursor: pointer;
 			outline: none;
-			border: 1px solid $primary-color;
+			background: $gold-color;
+			border: none;
+			outline: none;
 		}
 
 		button:hover {
@@ -145,6 +148,12 @@
 		img {
 			width: 25px;
 			cursor: pointer;
+			transition: 0.2s ease-out;
+		}
+
+		img:hover {
+			transform: rotate(180deg);
+			transition: 0.2s ease-in;
 		}
 	}
 }
@@ -193,6 +202,18 @@
 
 			p {
 				font-size: 1.2rem;
+			}
+
+			.contact-icon-details {
+				padding: 2rem;
+
+				.location,
+				.telephone,
+				.email {
+					p {
+						font-size: 1.1rem;
+					}
+				}
 			}
 		}
 	}

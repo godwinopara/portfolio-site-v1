@@ -9,6 +9,7 @@
 }
 html {
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -83,14 +84,21 @@ header {
 	font-family: $heading-font;
 	height: 100%;
 	width: 100%;
-	.logo-link {
-		color: $gold-color;
-		font-weight: 400;
-		font-size: 1rem;
-		padding: 0.3rem;
-		border-radius: 3px;
-		letter-spacing: 3px;
-	}
+	color: $gold-color;
+	font-weight: 400;
+	letter-spacing: 3px;
+	font-size: 1rem;
+	position: relative;
+}
+
+.logo::after {
+	content: "";
+	height: 1px;
+	width: 2rem;
+	background: $gold-color;
+	position: absolute;
+	top: 12px;
+	margin-left: 0.2rem;
 }
 
 /* ********** ************
@@ -107,14 +115,14 @@ header {
 	.hello-word-intro {
 		color: $gold-color;
 		position: relative;
-		padding-left: 5rem;
+		padding-left: 3rem;
 		margin: 2rem 0;
 	}
 
 	.hello-word-intro::before {
 		content: "";
 		height: 1px;
-		width: 4rem;
+		width: 2rem;
 		background: $gold-color;
 		position: absolute;
 		top: 10px;

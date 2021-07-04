@@ -8,6 +8,8 @@
 	<title>Porfolio</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
 		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<link rel="stylesheet" href="css/main.css" />
 </head>
 
@@ -17,14 +19,14 @@
 			<div class="header-nav">
 				<div class="header-container container">
 					<div class="logo">
-						<a class="logo-link" href="/index.html">GODWIN</a>
+						GODWIN
 					</div>
 					<nav>
 						<ul>
-							<li class="about-link"><a href="/">HOME</a></li>
-							<li class="about-link"><a href="/about.html">ABOUT</a></li>
-							<li class="about-link" id="contact"><a href="#about">CONTACT</a></li>
-							<li class="portfolio-link"><a href="#portfolio">PROJECTS</a></li>
+							<li class="about-link"><a href="/index.html">HOME</a></li>
+							<li id="about"><a href="#about">ABOUT</a></li>
+							<li id="contact"><a href="javascript:void(0)">CONTACT</a></li>
+							<li id="porfolio"><a href="#portfolio">PROJECTS</a></li>
 						</ul>
 					</nav>
 					<div class="hamburger-menu">
@@ -48,47 +50,53 @@
 							developer based<br>
 							in United Arab Emirates
 						</h1>
-						<div class="btn-container">
+						<!-- <div class="btn-container">
 							<a href="#contact">About Me </a>
 							<span><img src="/images/icon-arrow.svg" alt="arrow-icon"></span>
-						</div>
+						</div> -->
 					</div>
 					<div class="header-social-media">
-						<a class="social ">TWITTER</a>
-						<a class="social ">GITHUB</a>
-						<a class="social ">LINKDLIN</a>
+						<a class="social" href="https://twitter.com/godwinopara12" target="_blank">TWITTER</a>
+						<a class="social" href="https://github.com/godwinopara" target="_blank">GITHUB</a>
+						<a class="social" href="https://www.linkedin.com/in/godwinopara/" target="_blank">LINKDLIN</a>
 					</div>
 				</div>
 			</div>
 		</header>
 
 		<main>
-				<!-- ***************ABOUT SECTION ********************** -->
+			<!-- ***************ABOUT SECTION ********************** -->
 			<!-- ********************************************************** -->
-			<section class="about container" id="about">
+			<section class="about container" id="about" data-aos="fade-up">
 				<div class="about-content">
-					<figure class="about-image">
-						<img src="./images/new_portfolio-img.png" alt="" />
-					</figure>
-					<div class="about-description">
-						<div class="about-title">
-							ABOUT
-						</div>
-						<p>
-							I am Godwin Opara,a <strong>Front-End Developer</strong> from Nigeria, based
-							in United Arab Emirates.
-							I have passion in <strong>creating</strong> easy to use and <strong>dynamic website</strong>
-							using best practices.
-						</p>
+					<div class="flex">
+						<figure class="about-image">
+							<img src="./images/new_portfolio-img.png" alt="" />
+						</figure>
 
-						<div class="download-cv">
-							<a href="#">DOWNLOAD CV</a>
+						<div class="about-description">
+							<div class="about-title">
+								ABOUT
+							</div>
+							<h2>Hi, I am Godwin Opara</h2>
+							<p>
+								An Interactive and creative <span>Front End Developer</span> from Nigeria, based
+								in United Arab Emirates.<br />
+								I like <span>crafting</span> easy to use, dynamic,<span> smart user interface</span> and
+								developing rich <span>web experience and web application</span>.
+								<br>
+								when not fuzzing around with code, you can find me listening to gospel music.
+							</p>
+
+							<div class="download-cv">
+								<a href="#">DOWNLOAD CV</a>
+							</div>
 						</div>
 					</div>
-					<div class="skills">
+					<div class="skills" data-aos="fade-up">
 						<div class="skills-content">
 							<div class="skills-header">
-								<h2>EXPERTISE</h2>
+								EXPERTISE
 							</div>
 							<div class="skills-container">
 								<div class="skill-icon">
@@ -119,8 +127,8 @@
 								</div>
 								<div class="skill-icon">
 									<i class="responsive-design fas fa-laptop-code fa-3x"></i>
-									<p>RESPONSIVE 
-										
+									<p>RESPONSIVE
+
 										DESIGN</p>
 								</div>
 								<div class="skill-icon">
@@ -132,97 +140,89 @@
 						</div>
 					</div>
 				</div>
-
-
-
-
-
 			</section>
 			<!-- ****************PORTFOLIO SECTION ********************** -->
 			<!-- ********************************************************** -->
-			<section class="portfolio" id="portfolio">
-				<div class="portfolio-title container">
-
+			<section class="portfolio" id="portfolio"data-aos="fade-up">
+				<div class=" portfolio-title container">
 					<div class="recent-work">RECENT WORK</div>
 					<p>
 						Here are some of my favorite projects I have done lately. Feel free to check them out.
 					</p>
 				</div>
 				<div class="project-container container">
-					<figure>
-						<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-						<strong class="left-number">01</strong>
+				<figure>
+					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
+					<strong class="left-number">01</strong>
 
-						<figcaption>
-							<h3>PROJECT 1</h3>
+					<figcaption>
+						<h3>PROJECT 1</h3>
 
-							<p>
-								Lorem ipsum dolor, sit amet
-								<br>
-								consectetur adipisicing elit. Natus, soluta?
-							</p>
-							<div class="project-info-btn">
+						<p>
+							Lorem ipsum dolor, sit amet
+							<br>
+							consectetur adipisicing elit. Natus, soluta?
+						</p>
+						<div class="project-info-btn">
 
-								<input type="button" value="Live Demo">
-								<input type="button" value="GitHub">
-							</div>
+							<input type="button" value="Live Demo">
+							<input type="button" value="GitHub">
+						</div>
 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-						<strong class="right-number">02</strong>
-						<figcaption class="right-figcaption">
-							<h3>PROJECT 2</h3>
-							<p>Lorem ipsum dolor sit amet consectetur
-								<br>
-								adipisicing elit. Doloremque, totam!</p>
-							<div class="project-info-btn">
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
+					<strong class="right-number">02</strong>
+					<figcaption class="right-figcaption">
+						<h3>PROJECT 2</h3>
+						<p>Lorem ipsum dolor sit amet consectetur
+							<br>
+							adipisicing elit. Doloremque, totam!</p>
+						<div class="project-info-btn">
 
-								<input type="button" value="Live Demo">
-								<input type="button" value="GitHub">
-							</div>
+							<input type="button" value="Live Demo">
+							<input type="button" value="GitHub">
+						</div>
 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./images/laptop.jpg" alt="" />
-						<strong class="left-number">03</strong>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="./images/laptop.jpg" alt="" />
+					<strong class="left-number">03</strong>
 
-						<figcaption>
-							<h3>PROJECT 2</h3>
-							<p>Lorem ipsum dolor sit amet consectetur
-								<br>
-								adipisicing elit. Doloremque, totam!</p>
-							<div class="project-info-btn">
+					<figcaption>
+						<h3>PROJECT 2</h3>
+						<p>Lorem ipsum dolor sit amet consectetur
+							<br>
+							adipisicing elit. Doloremque, totam!</p>
+						<div class="project-info-btn">
 
-								<input type="button" value="Live Demo">
-								<input type="button" value="GitHub">
-							</div>
+							<input type="button" value="Live Demo">
+							<input type="button" value="GitHub">
+						</div>
 
-						</figcaption>
-					</figure>
-					<figure>
-						<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-						<strong class="right-number">04</strong>
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
+					<strong class="right-number">04</strong>
 
-						<figcaption class="right-figcaption">
-							<h3>PROJECT 2</h3>
-							<p>Lorem ipsum dolor sit amet consectetur
-								<br>
-								adipisicing elit. Doloremque, totam!</p>
-							<div class="project-info-btn">
+					<figcaption class="right-figcaption">
+						<h3>PROJECT 2</h3>
+						<p>Lorem ipsum dolor sit amet consectetur
+							<br>
+							adipisicing elit. Doloremque, totam!</p>
+						<div class="project-info-btn">
 
-								<input type="button" value="Live Demo">
-								<input type="button" value="GitHub">
-							</div>
-						</figcaption>
-					</figure>
-				</div>
-				<div class="view-more-projects">
-
+							<input type="button" value="Live Demo">
+							<input type="button" value="GitHub">
+						</div>
+					</figcaption>
+				</figure>
+				<!-- <div class="view-more-projects">
 					<input type="button" value="View all my work">
-				</div>
+				</div> -->
 			</section>
 
 			<section class="lets-work-together">
@@ -237,13 +237,9 @@
 
 		<div class="contact" id="contact">
 			<div class="contact-container">
-				<div class="contact-title">
-				</div>
 				<div class="contact-description">
-
 					<div class="contact-details">
 						<div class="contact-details-content">
-
 							<h2>Let's Work Together</h2>
 							<p>Do you have a new project, do you want to inquiry about freelance or do want us to have a
 								cup of coffee together
@@ -292,16 +288,15 @@
 									<label for="message">Message</label>
 									<br>
 									<textarea name="message" id="message" cols="30" rows="4"></textarea required>
-									</div>
-	
-									<button type="submit">SEND</button>
-								</form>
-							</div>
+								</div>
+		
+								<button type="submit">SEND</button>
+							</form>
 						</div>
-						</div>
+					</div>
 				</div>
 			</div>
-
+		</div>
 		<!-- *************************************************************** -->
 		<!-- ********************* FOOTER SECTION ***************************** -->
 		<footer>
@@ -332,6 +327,11 @@
 	</div>
 
 	<script src="./js/main.js"></script>
+	<script>
+		AOS.init({
+			duration:1000
+		});
+	</script>
 </body>
 
 </html>
