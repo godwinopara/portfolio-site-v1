@@ -6,9 +6,22 @@
 		font-weight: 400;
 		letter-spacing: 3px;
 
-		h2 {
+		.recent-work {
 			margin-bottom: 1rem;
-			font-size: 1.5rem;
+			font-size: 1rem;
+			color: $gold-color;
+			position: relative;
+			padding-left: 4rem;
+		}
+
+		.recent-work::before {
+			content: "";
+			height: 1px;
+			width: 3rem;
+			background: $gold-color;
+			position: absolute;
+			left: 0;
+			top: 10px;
 		}
 
 		p {

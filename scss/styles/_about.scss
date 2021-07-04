@@ -1,7 +1,117 @@
+@import "./default_styles";
 .about {
+	padding-bottom: 10rem;
 	.about-img {
-		img {
-			width: 10%;
+	}
+
+	&-description {
+		.about-title {
+			margin: 3rem 0;
+			font-size: 1rem;
+			color: $gold-color;
+			position: relative;
+			padding-left: 3rem;
+		}
+
+		.about-title::before {
+			content: "";
+			position: absolute;
+			height: 1px;
+			width: 2rem;
+			left: 0;
+			top: 10px;
+			background: $gold-color;
+		}
+
+		p {
+			line-height: 2;
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+		}
+
+		.download-cv {
+			text-align: center;
+			margin: 2rem 0;
+
+			a {
+				background: $button-color;
+				color: $gold-color;
+				font-weight: 600;
+				font-size: 0.9rem;
+				letter-spacing: 4px;
+				display: block;
+				width: 100%;
+				padding: 1.3rem 0;
+			}
+
+			a:hover {
+				background: $primary-color;
+				color: $secondary-color;
+			}
+		}
+	}
+
+	.skills {
+		padding-top: 10rem;
+		&-content {
+			.skills-header {
+				padding-bottom: 3rem;
+			}
+			.skills-container {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				grid-gap: 2rem;
+
+				.skill-icon {
+					border: 1px solid white;
+					font-size: 1.3rem;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					padding: 1rem;
+					background: $button-color;
+					border: none;
+					border-radius: 2px;
+
+					p {
+						font-size: 1rem;
+						margin-top: 1rem;
+					}
+				}
+
+				.html {
+					color: #ff5733;
+				}
+				.css {
+					color: blue;
+				}
+				.js {
+					color: #f0db4f;
+				}
+				.react {
+					color: #61dbfb;
+				}
+				.scss {
+					color: #cc6699;
+				}
+				.responsive-design {
+					color: $text-color;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.about {
+		.skills {
+			&-content {
+				.skills-container {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
 		}
 	}
 }

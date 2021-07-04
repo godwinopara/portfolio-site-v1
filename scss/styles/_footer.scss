@@ -4,10 +4,11 @@
 
 footer {
 	background: $secondary-color;
-	min-height: 40vh;
+	min-height: 50vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding-bottom: 1rem;
 
 	a {
 		color: $text-color;
