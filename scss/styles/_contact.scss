@@ -56,8 +56,15 @@
 			}
 
 			.location,
-			.telephone {
-				margin-bottom: 2rem;
+			.telephone,
+			.email {
+				display: flex;
+				align-items: center;
+
+				p {
+					margin-left: 1rem;
+					letter-spacing: 1px;
+				}
 			}
 
 			.contact-social-media {
@@ -68,6 +75,9 @@
 
 				.social {
 					cursor: pointer;
+				}
+				.social:hover {
+					opacity: 0.5;
 				}
 			}
 		}
@@ -117,6 +127,13 @@
 			color: $secondary-color;
 			margin: 1rem 0;
 			cursor: pointer;
+			outline: none;
+			border: 1px solid $primary-color;
+		}
+
+		button:hover {
+			background: transparent;
+			color: $primary-color;
 		}
 	}
 

@@ -3,12 +3,18 @@
 	padding: 5rem 0;
 
 	.portfolio-title {
-		text-align: center;
-		margin-bottom: 1.5em;
-		font-size: 1.8rem;
 		font-weight: 400;
 		letter-spacing: 3px;
-		font-family: $heading-font;
+
+		h2 {
+			margin-bottom: 1rem;
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 2rem;
+			margin: 2rem 0;
+		}
 	}
 
 	figure {
@@ -45,13 +51,13 @@
 
 			input {
 				cursor: pointer;
-				padding: 0.5rem 1.5rem;
+				padding: 0.4rem 1rem;
 				border-radius: 2px;
 				border: none;
 				font-size: 1rem;
 				font-weight: 500;
-				background: $primary-color;
-				color: $secondary-color;
+				background: $secondary-color;
+				color: $text-color;
 			}
 
 			input + input {
@@ -69,14 +75,47 @@
 			margin-top: 3rem;
 			border-radius: 2px;
 			border: none;
-			font-size: 1rem;
+			font-size: 1.2rem;
 			font-weight: 600;
+			border: 1px solid $gold-color;
+			color: $text-color;
+			background: transparent;
+			transition: all 0.5s ease-out;
+		}
+
+		input:hover {
+			background: transparent;
+			border: 1px solid $text-color;
+			color: $text-color;
+			transition: all 0.5s ease-in;
+		}
+	}
+}
+@media screen and (min-width: 540px) and (max-width: 799px) {
+	.portfolio {
+		figure {
+			figcaption {
+				h3 {
+					font-size: 1.7rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+			}
 		}
 	}
 }
 
 @media screen and (min-width: 800px) {
 	.portfolio {
+		.portfolio-title {
+			width: 100%;
+
+			p {
+				font-size: 3rem;
+				max-width: 80%;
+			}
+		}
 		.project-container {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
@@ -92,12 +131,17 @@
 				opacity: 0;
 
 				h3 {
-					font-size: 2rem;
+					font-size: 2.7rem;
 				}
 
 				p {
-					font-size: 1rem;
+					font-size: 1.3rem;
 					margin: 1rem 0 1.5rem;
+				}
+
+				input {
+					padding: 1rem 2rem;
+					font-weight: 600;
 				}
 			}
 
@@ -140,7 +184,7 @@
 			position: absolute;
 			right: 0;
 			top: -12%;
-			font-size: 5rem;
+			font-size: 7rem;
 			opacity: 0;
 			transform: translateY(30%);
 		}

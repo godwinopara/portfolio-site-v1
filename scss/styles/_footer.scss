@@ -10,9 +10,12 @@ footer {
 	justify-content: center;
 
 	a {
-		color: $primary-color;
+		color: $text-color;
 	}
 
+	a:hover {
+		color: $gold-color;
+	}
 	.footer-content {
 		width: 90%;
 		display: flex;
@@ -31,11 +34,9 @@ footer {
 	.footer-logo {
 		margin-top: 2rem;
 		font-family: $heading-font;
-		font-size: 1.7rem;
 
 		a {
-			color: $primary-color;
-			font-size: 1.8rem;
+			color: $gold-color;
 		}
 	}
 
@@ -50,9 +51,6 @@ footer {
 		a {
 			font-size: 0.9rem;
 		}
-		a:hover {
-			border-bottom: 1px solid $primary-color;
-		}
 	}
 }
 
@@ -65,10 +63,7 @@ footer {
 		margin-left: 1rem;
 	}
 	a {
-		font-size: 1rem;
-	}
-	a:hover {
-		border-bottom: 1px solid $primary-color;
+		font-size: 0.9rem;
 	}
 }
 .copy-write {
@@ -99,8 +94,9 @@ footer {
 
 			ul {
 				display: flex;
+				align-items: center;
 				list-style: none;
-				margin-left: 2rem;
+				margin-left: 4rem;
 
 				li + li {
 					margin-top: 0;
@@ -108,7 +104,7 @@ footer {
 				}
 
 				a {
-					font-size: 1rem;
+					font-size: 0.9rem;
 				}
 			}
 		}

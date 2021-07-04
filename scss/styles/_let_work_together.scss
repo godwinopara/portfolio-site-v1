@@ -25,9 +25,16 @@
 			padding: 1rem 2rem;
 			cursor: pointer;
 			background: $secondary-color;
-			color: $primary-color;
+			color: $text-color;
 			border: none;
 			font-weight: 600;
+			transition: 0.5s ease-out;
+		}
+		input:hover {
+			background: transparent;
+			border: 1px solid $secondary-color;
+			color: $secondary-color;
+			transition: 0.5s ease-in;
 		}
 	}
 }

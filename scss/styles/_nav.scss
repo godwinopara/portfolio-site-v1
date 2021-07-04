@@ -24,15 +24,14 @@
 				font-size: 1.8rem;
 
 				a {
-					color: $primary-color;
+					color: $text-color;
 					padding: 1rem;
 					display: flex;
 					align-items: center;
 					justify-content: center;
 				}
 				a:hover {
-					background: $primary-color;
-					color: $secondary-color;
+					color: $gold-color;
 				}
 			}
 		}
@@ -70,27 +69,17 @@
 					border-radius: 4px;
 					width: 100%;
 					font-size: 1rem;
+					border: 1px solid $border-color;
+					border-top: none;
+					border-bottom: none;
 
 					a {
-						color: $primary-color;
 						padding: 0.5rem;
 					}
 				}
 
 				li:hover a {
-					color: $secondary-color;
-					background: $primary-color;
-				}
-
-				.contact-link::before {
-					content: "";
-					position: absolute;
-					top: -17px;
-					margin-left: 36.5px;
-					height: 20px;
-					width: 7px;
-					background: $primary-color;
-					display: none;
+					color: $gold-color;
 				}
 			}
 		}
