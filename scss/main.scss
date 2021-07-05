@@ -17,6 +17,7 @@ body {
 	line-height: 1.5;
 	color: $text-color;
 	font-weight: 300;
+	background: $secondary-color;
 }
 
 main {
@@ -67,7 +68,7 @@ header {
 	color: rgb(0, 0, 0);
 	min-height: 100vh;
 	background: $secondary-color;
-	padding-bottom: 10rem;
+	margin-bottom: 10rem;
 
 	.header-nav {
 		border-bottom: 1px solid $border-color;

@@ -62,7 +62,7 @@
 				margin: 0.9rem 0;
 			}
 
-			input {
+			a {
 				cursor: pointer;
 				padding: 0.4rem 1rem;
 				border-radius: 2px;
@@ -71,9 +71,16 @@
 				font-weight: 500;
 				background: $secondary-color;
 				color: $text-color;
+				border-left: 2px solid transparent;
+				border-bottom: 2px solid transparent;
 			}
 
-			input + input {
+			a:hover {
+				border-bottom: 2px solid $gold-color;
+				border-left: 2px solid $gold-color;
+			}
+
+			a + a {
 				margin-left: 1rem;
 			}
 		}
@@ -152,7 +159,7 @@
 					margin: 1rem 0 1.5rem;
 				}
 
-				input {
+				a {
 					padding: 1rem 2rem;
 					font-weight: 600;
 				}

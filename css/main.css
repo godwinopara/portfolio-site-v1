@@ -68,7 +68,7 @@
   margin: 0.9rem 0;
 }
 
-.portfolio figure figcaption input {
+.portfolio figure figcaption a {
   cursor: pointer;
   padding: 0.4rem 1rem;
   border-radius: 2px;
@@ -77,9 +77,16 @@
   font-weight: 500;
   background: #141516;
   color: white;
+  border-left: 2px solid transparent;
+  border-bottom: 2px solid transparent;
 }
 
-.portfolio figure figcaption input + input {
+.portfolio figure figcaption a:hover {
+  border-bottom: 2px solid #e2a850;
+  border-left: 2px solid #e2a850;
+}
+
+.portfolio figure figcaption a + a {
   margin-left: 1rem;
 }
 
@@ -147,7 +154,7 @@
     font-size: 1.3rem;
     margin: 1rem 0 1.5rem;
   }
-  .portfolio figure figcaption input {
+  .portfolio figure figcaption a {
     padding: 1rem 2rem;
     font-weight: 600;
   }
@@ -588,6 +595,7 @@ footer .footer-content {
 .contact-description .contact-form button:hover {
   background: transparent;
   color: #a1a1a2;
+  border: 1px solid #e2a850;
 }
 
 .contact-description .close-icon {
@@ -674,7 +682,7 @@ footer .footer-content {
 }
 
 .about {
-  padding-bottom: 10rem;
+  padding: 5rem 0;
 }
 
 .about-description .about-title {
@@ -761,7 +769,6 @@ footer .footer-content {
 }
 
 .about .skills-content .skills-container .skill-icon {
-  border: 1px solid white;
   font-size: 1.3rem;
   display: flex;
   flex-direction: column;
@@ -771,11 +778,17 @@ footer .footer-content {
   background: #2c2c2d;
   border: none;
   border-radius: 2px;
+  transition: 0.8s ease-out;
 }
 
 .about .skills-content .skills-container .skill-icon p {
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.about .skills-content .skills-container .skill-icon:hover {
+  border-left: 2px solid #e2a850;
+  transition: 0.8s ease-in;
 }
 
 .about .skills-content .skills-container .html {
@@ -804,6 +817,9 @@ footer .footer-content {
 }
 
 @media screen and (min-width: 900px) {
+  .about {
+    margin: 5rem 0;
+  }
   .about .flex {
     display: flex;
   }
@@ -840,6 +856,7 @@ body {
   line-height: 1.5;
   color: white;
   font-weight: 300;
+  background: #141516;
 }
 
 main {
@@ -889,7 +906,7 @@ header {
   color: black;
   min-height: 100vh;
   background: #141516;
-  padding-bottom: 10rem;
+  margin-bottom: 10rem;
 }
 
 header .header-nav {

@@ -1,5 +1,8 @@
 const navLink = document.querySelector("nav");
 const navContact = document.querySelector("#contact");
+const footerContact = document.querySelector(".footer-contact");
+const project = document.querySelector("#project");
+const about = document.querySelector("#about-me");
 const workTogetherContactBtn = document.querySelector("#work-together-contact-btn");
 const contact = document.querySelector(".contact-description");
 const hamburgerContainer = document.querySelector(".hamburger-menu");
@@ -27,6 +30,17 @@ closeIcon.addEventListener("click", () => {
 });
 
 navContact.addEventListener("click", showContact);
+footerContact.addEventListener("click", showContact);
+project.addEventListener("click", () => {
+	hamburgerContainer.classList.remove("show");
+	navLink.classList.remove("show-nav");
+	lockScroll(navLink, "show-nav");
+});
+about.addEventListener("click", () => {
+	hamburgerContainer.classList.remove("show");
+	navLink.classList.remove("show-nav");
+	lockScroll(navLink, "show-nav");
+});
 
 workTogetherContactBtn.addEventListener("click", showContact);
 
