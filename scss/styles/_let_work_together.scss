@@ -1,9 +1,5 @@
 .lets-work-together {
-	background: $primary-color;
-	background-image: url("/images/christina-wocintechchat-com-OtHEYbQXLFU-unsplash.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
@@ -11,7 +7,8 @@
 	min-height: 70vh;
 
 	&-content {
-		color: $secondary-color;
+		color: $text-color;
+		z-index: 100;
 
 		h3 {
 			margin: 2rem 0;
@@ -31,12 +28,24 @@
 			transition: 0.5s ease-out;
 		}
 		input:hover {
-			background: transparent;
-			border: 1px solid $secondary-color;
-			color: $secondary-color;
+			background: $gold-color;
 			transition: 0.5s ease-in;
 		}
 	}
+}
+
+.lets-work-together::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url("/images/joshua-aragon-azft6PuI3Ug-unsplash.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.4;
 }
 
 @media screen and (min-width: 800px) {

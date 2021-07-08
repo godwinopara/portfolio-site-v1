@@ -38,42 +38,28 @@ img {
 
 .container {
 	max-width: 1200px;
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
 }
 
 /* *****************************
 ********************************
 **********HEADER STYLES********* */
-header::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	background-image: url("/images/fotis-fotopoulos-xQ2qynQ92xs-unsplash.jpg");
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: $secondary-color;
-	z-index: -1;
-	opacity: 1;
-}
 
 header {
 	color: rgb(0, 0, 0);
-	min-height: 100vh;
-	background: $secondary-color;
-	margin-bottom: 10rem;
+	background: transparent;
+	margin-bottom: 5rem;
+	min-height: 120vh;
 
 	.header-nav {
-		border-bottom: 1px solid $border-color;
+		background: $gold-color;
 		border-top: none;
 		padding: 0.2rem 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
 	}
 }
 
@@ -85,7 +71,7 @@ header {
 	font-family: $heading-font;
 	height: 100%;
 	width: 100%;
-	color: $gold-color;
+	color: $text-color;
 	font-weight: 400;
 	letter-spacing: 3px;
 	font-size: 1rem;
@@ -96,7 +82,7 @@ header {
 	content: "";
 	height: 1px;
 	width: 2rem;
-	background: $gold-color;
+	background: $text-color;
 	position: absolute;
 	top: 12px;
 	margin-left: 0.2rem;
@@ -106,18 +92,18 @@ header {
 ******* HEADER CONTENT ***** */
 
 .header-description {
-	min-height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
 	color: rgb(44, 43, 43);
+	margin: 2rem 0;
 
 	.hello-word-intro {
 		color: $gold-color;
 		position: relative;
 		padding-left: 3rem;
-		margin: 2rem 0;
+		margin: 4rem 0 3rem;
 	}
 
 	.hello-word-intro::before {
@@ -137,60 +123,29 @@ header {
 
 	h1 {
 		font-size: 3rem;
-		font-weight: bold;
+		font-weight: bolder;
 		color: white;
 		font-family: $heading-font;
-		letter-spacing: 2px;
+		letter-spacing: 3px;
 	}
-
-	em {
-		color: white;
-		font-size: 1.2rem;
-		// font-weight: bold;
-		font-family: $secondary-font;
-		letter-spacing: 2px;
-	}
-
-	.btn-container {
-		position: relative;
-		a {
-			display: inline-block;
-			color: black;
-			background: $gold-color;
-			margin: 1rem auto;
-			padding: 1rem 3rem;
-			border-radius: 3px;
-			font-size: 1.3rem;
-		}
-		span {
-			position: absolute;
-			top: 16px;
-			left: 170px;
-		}
-	}
-
-	.contact-input {
-		margin-bottom: 1rem;
-		padding: 1em 2.3em;
-	}
-}
-
-.header-description * {
-	margin: 0.7rem 0;
 }
 
 .header-social-media {
+	margin: 3rem 0;
+	display: flex;
+
 	.social {
-		margin-right: 0.7rem;
 		cursor: pointer;
 		color: $text-color;
-		transform: rotate(90deg);
 		font-size: 0.8rem;
 		padding: 0.5rem 1rem;
+		border: 1px solid $gold-color;
+		display: flex;
+		margin: 1rem 0;
 	}
 
 	.social + .social {
-		margin-top: 5rem;
+		margin-left: 1rem;
 	}
 
 	.social:hover {
@@ -203,7 +158,7 @@ header {
 
 .hamburger-menu {
 	position: absolute;
-	top: 25%;
+	top: 28%;
 	right: 0;
 	cursor: pointer;
 	transition: 0.3s ease-out;
@@ -222,6 +177,7 @@ header {
 }
 .show {
 	transition: 0.5s ease-in;
+	right: 5%;
 
 	.hamburger {
 		transform: translateX(150%);
@@ -248,17 +204,15 @@ header {
 }
 
 @media screen and (min-width: 800px) {
-	.container {
-		width: 100%;
-	}
 	.header-description {
 		width: 100%;
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-end;
 		justify-content: space-between;
+		margin: 4rem 0;
 
 		h1 {
-			font-size: 4rem;
+			font-size: 4.5rem;
 		}
 
 		input {
@@ -269,6 +223,17 @@ header {
 		.header-social-media {
 			display: flex;
 			flex-direction: column;
+			align-items: center;
+
+			.social {
+				transform: rotate(90deg);
+				margin-right: 0.7rem;
+			}
+
+			.social + .social {
+				margin-left: 0;
+				margin-top: 5rem;
+			}
 		}
 	}
 	.hamburger-menu {

@@ -1,5 +1,4 @@
 .header-container {
-	position: relative;
 	padding: 0.5rem 0;
 
 	nav {
@@ -11,18 +10,20 @@
 		justify-content: center;
 		height: 100vh;
 		width: 100vw;
-		background: $secondary-color;
+		background: $gold-color;
 		z-index: 1000;
 		transform: translateY(-100%);
 
 		ul {
 			list-style: none;
 			li + li {
-				margin-top: 2rem;
+				margin-top: 1rem;
 			}
 
 			li {
-				font-size: 1.8rem;
+				font-size: 1.5rem;
+				width: 100%;
+				margin: auto;
 
 				a {
 					color: $text-color;
@@ -30,9 +31,10 @@
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					display: inline-block;
 				}
 				a:hover {
-					color: $gold-color;
+					background: $secondary-color;
 				}
 			}
 		}
@@ -53,6 +55,7 @@
 			position: static;
 			height: 100%;
 			display: block;
+			background: transparent;
 
 			ul {
 				display: flex;
@@ -70,17 +73,16 @@
 					border-radius: 4px;
 					width: 100%;
 					font-size: 1rem;
-					border: 1px solid $border-color;
-					border-top: none;
-					border-bottom: none;
 
 					a {
 						padding: 0.5rem;
+						color: $text-color;
 					}
 				}
 
 				li:hover a {
-					color: $gold-color;
+					background: $secondary-color;
+					color: $text-color;
 				}
 			}
 		}

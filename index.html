@@ -5,61 +5,62 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Porfolio</title>
+	<title>Godwin Opara | Front End Developer</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
 		integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" />
 	<link rel="stylesheet" href="css/main.css" />
 </head>
 
 <body>
-	<header>
-		<div class="header-nav">
-			<div class="header-container container">
-				<div class="logo">
-					GODWIN
-				</div>
-				<nav>
-					<ul>
-						<li><a href="/">HOME</a></li>
-						<li id="about-me" ><a href="#about">ABOUT</a></li>
-						<li id="contact"><a href="javascript:void(0)">CONTACT</a></li>
-						<li id="project"><a href="#portfolio">PROJECTS</a></li>
-					</ul>
-				</nav>
-				<div class="hamburger-menu">
-					<div class="hamburger">
-						<img src="/images/icon-hamburger.svg" alt="hamburger">
+	<div id="particles-js">
+		<header>
+			<div class="header-nav">
+				<div class="header-container container">
+					<div class="logo">
+						GODWIN
 					</div>
-					<div class="hamburger-close">
-						<img src="/images/icon-close.svg" alt="hamburger-close">
+					<nav>
+						<ul>
+							<li><a href="/">HOME</a></li>
+							<li id="about-me"><a href="#about">ABOUT</a></li>
+							<li id="contact"><a href="javascript:void(0)">CONTACT</a></li>
+							<li id="project"><a href="#portfolio">PROJECTS</a></li>
+						</ul>
+					</nav>
+					<div class="hamburger-menu">
+						<div class="hamburger">
+							<img src="/images/icon-hamburger.svg" alt="hamburger">
+						</div>
+						<div class="hamburger-close">
+							<img src="/images/icon-close.svg" alt="hamburger-close">
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="portfolio-hero container">
+			<div class="portfolio-hero container">
 
-			<div class="header-description">
-				<div class="header-description-content">
-					<div class="hello-word-intro">HELLO WORLD</div>
-					<h1>Godwin Opara<br>
-						Interactive
-						Front-end<br>
-						developer based<br>
-						in United Arab Emirates
-					</h1>
-					<!-- <div class="btn-container">
-							<a href="#contact">About Me </a>
-							<span><img src="/images/icon-arrow.svg" alt="arrow-icon"></span>
-						</div> -->
-				</div>
-				<div class="header-social-media">
-					<a class="social" href="https://twitter.com/godwinopara12" target="_blank">TWITTER</a>
-					<a class="social" href="https://github.com/godwinopara" target="_blank">GITHUB</a>
-					<a class="social" href="https://www.linkedin.com/in/godwinopara/" target="_blank">LINKDLIN</a>
+				<div class="header-description">
+					<div class="header-description-content">
+						<div class="hello-word-intro">HELLO WORLD</div>
+						<h1>Godwin Opara<br>
+							Interactive
+							Front End<br>
+							Developer based<br>
+							in United Arab Emirates
+						</h1>
+
+					</div>
+					<div class="header-social-media">
+						<a class="social" href="https://twitter.com/godwinopara12" target="_blank">TWITTER</a>
+						<a class="social" href="https://github.com/godwinopara" target="_blank">GITHUB</a>
+						<a class="social linkedin" href="https://www.linkedin.com/in/godwinopara/"
+							target="_blank">LINKDLIN</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</header>
+		</header>
+	</div>
 
 	<main>
 		<!-- ***************ABOUT SECTION ********************** -->
@@ -86,7 +87,8 @@
 						</p>
 
 						<div class="download-cv">
-							<a href="#">DOWNLOAD CV</a>
+							<a href="https://docs.google.com/document/d/1zjFCQodufYGW0e-2RJ9MpJD_9TWoB2R8j3kly6Jpv7I/edit?usp=sharing"
+								target="_blank">DOWNLOAD CV</a>
 						</div>
 					</div>
 				</div>
@@ -140,84 +142,80 @@
 		</section>
 		<!-- ****************PORTFOLIO SECTION ********************** -->
 		<!-- ********************************************************** -->
-		<section class="portfolio" id="portfolio">
-			<div class=" portfolio-title container">
+		<section class="portfolio container" id="portfolio">
+
+			<div class=" portfolio-title">
 				<div class="recent-work">RECENT WORK</div>
 				<p>
 					Here are some of my favorite projects I have done lately. Feel free to check them out.
 				</p>
 			</div>
-			<div class="project-container container">
-				<figure>
-					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-					<strong class="left-number">01</strong>
-
-					<figcaption>
-						<h3>STARBUCK CLONE</h3>
+			<div class="project-container">
+				<div class="project-1">
+					<div class="project-1-content">
+						<h3>Starbuck Clone</h3>
 
 						<p>
-							Lorem ipsum dolor, sit amet
+							A clone of the <a href="https://www.starbucks.com/" target="_blank">Starbuck</a> website
 							<br>
-							consectetur adipisicing elit. Natus, soluta?
+							<span>React</span>
+							<span>React Router</span>
+							<span>scss</span>
+
+
+						</p>
+
+						<div class="project-info-btn">
+							<a href="https://starbuck-clone.netlify.app" target="_blank">Live Demo</a>
+							<a href="https://github.com/godwinopara/starbuck-clone" target="_blank">Github</a>
+
+						</div>
+
+					</div>
+					<strong class="left-number">01</strong>
+				</div>
+				<div class="project-2">
+					<strong class="right-number">02</strong>
+					<div class="project-2-content right-figcaption">
+						<h3>Room Landing Page</h3>
+						<p>Room E-commerce landing page
+							<br>
+							<span>React</span>
+							<span>scss</span>
+
+
 						</p>
 						<div class="project-info-btn">
-							<a href="#">Live Demo</a>
-							<a href="#">Github</a>
 
+							<a href="https://room-website-sage.vercel.app/" target="_blank">Live Demo</a>
+							<a href="https://github.com/godwinopara/room-website" target="_blank">Github</a>
 						</div>
 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-					<strong class="right-number">02</strong>
-					<figcaption class="right-figcaption">
-						<h3>PROJECT 2</h3>
-						<p>Lorem ipsum dolor sit amet consectetur
+					</div>
+
+
+				</div>
+				<div class="project-3">
+
+
+					<div class="project-3-content">
+						<h3>Clipboard Landing Page</h3>
+						<p>
+							<span>HTMLS</span>
+							<span>CSS3</span>
 							<br>
 							adipisicing elit. Doloremque, totam!</p>
 						<div class="project-info-btn">
 
-							<a href="#">Live Demo</a>
-							<a href="#">Github</a>
+							<a href="https://clipboard-landing-page-ten-chi.vercel.app/" target="_blank">Live Demo</a>
+							<a href="https://github.com/godwinopara/clipboard-landing-page" target="_blank">Github</a>
 						</div>
 
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="./images/laptop.jpg" alt="" />
+					</div>
 					<strong class="left-number">03</strong>
+				</div>
 
-					<figcaption>
-						<h3>PROJECT 2</h3>
-						<p>Lorem ipsum dolor sit amet consectetur
-							<br>
-							adipisicing elit. Doloremque, totam!</p>
-						<div class="project-info-btn">
 
-							<a href="#">Live Demo</a>
-							<a href="#">Github</a>
-						</div>
-
-					</figcaption>
-				</figure>
-				<figure>
-					<img src="./images/clement-helardot-95YRwf6CNw8-unsplash.jpg" alt="" />
-					<strong class="right-number">04</strong>
-
-					<figcaption class="right-figcaption">
-						<h3>PROJECT 2</h3>
-						<p>Lorem ipsum dolor sit amet consectetur
-							<br>
-							adipisicing elit. Doloremque, totam!</p>
-						<div class="project-info-btn">
-
-							<a href="#">Live Demo</a>
-							<a href="#">Github</a>
-						</div>
-					</figcaption>
-				</figure>
-				<!-- -->
 		</section>
 
 		<section class="lets-work-together">
@@ -296,34 +294,31 @@
 		<!-- ********************* FOOTER SECTION ***************************** -->
 		<footer>
 			<div class="footer-content container" id="footer">
-				<div class="footer-links">
-					<div class="footer-nav">
-						<div class="footer-logo">
-							<a href="/">GODWIN</a>
-						</div>
-						<ul>
-							<li><a href="/">HOME</a></li>
-							<li><a href="#about">ABOUT</a></li>
-							<li class="footer-contact"><a href="javascript:void(0)">CONTACT</a></li>
-							<li><a href="#portfolio">PROJECTS</a></li>
-
-						</ul>
-					</div>
-					<div class="footer-social-media">
-						<a href="https://github.com/godwinopara" target="_blank">GitHub</a>
-						<a href="https://www.linkedin.com/in/godwinopara/" target="_blank">Linkedin</a>
-						<a href="https://twitter.com/godwinopara12" target="_blank">Twitter</a>
-
-					</div>
+				<div class="footer-logo">
+					<a href="/">GODWIN</a>
 				</div>
+
+				<div class="footer-social-media">
+					<div class="github footer-social">
+						<i class="fab fa-github"></i>
+						<a href="https://github.com/godwinopara" target="_blank">GitHub</a>
+					</div>
+					<div class="linkedin footer-social">
+						<i class="fab fa-linkedin"></i>
+						<a href="https://www.linkedin.com/in/godwinopara/" target="_blank">Linkedin</a>
+					</div>
+					<div class="twitter footer-social">
+						<i class="fab fa-twitter"></i>
+						<a href="https://twitter.com/godwinopara12" target="_blank">Twitter</a>
+					</div>
+
+				</div>
+				
 				<p class="copy-write container">&copy;2021 GODWIN OPARA</p>
 			</div>
 		</footer>
 
-	<script src="./js/main.js"></script>
-	<script>
-		
-	</script>
+	<script src="js/main.js"></script> 
 </body>
 
 </html>
