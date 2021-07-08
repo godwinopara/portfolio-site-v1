@@ -212,8 +212,8 @@
 }
 
 @media screen and (min-width: 1000px) {
-  .portfolio .portfolio-title .recent-work p {
-    font-size: 2.3rem;
+  .portfolio .portfolio-title p {
+    font-size: 3rem;
   }
   .portfolio .project-1,
   .portfolio .project-2,
@@ -312,7 +312,7 @@
   display: block;
   padding: 1rem 2rem;
   cursor: pointer;
-  background: #141516;
+  background: #2b7a78;
   color: white;
   border: none;
   font-weight: 600;
@@ -320,7 +320,7 @@
 }
 
 .lets-work-together-content input:hover {
-  background: #2b7a78;
+  background: #141516;
   transition: 0.5s ease-in;
 }
 
@@ -335,7 +335,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 @media screen and (min-width: 800px) {
@@ -345,7 +345,7 @@
   }
   .lets-work-together-content h3 {
     letter-spacing: 5px;
-    font-size: 2.5rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -384,7 +384,7 @@ footer .footer-content {
 .footer-logo {
   margin: 2rem 0;
   font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .footer-logo a {
@@ -400,41 +400,21 @@ footer .footer-content {
 }
 
 .footer-social-media div + div {
-  margin-left: 1rem;
+  margin-left: 1.5rem;
 }
 
 .footer-social-media .footer-social {
   border-left: 1px solid #2b7a78;
-  padding-left: 1rem;
+  padding-left: 0.8rem;
 }
 
 .footer-social-media .footer-social a {
   margin-left: 0.3rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .footer-social-media .footer-social i {
   font-size: 1rem;
-}
-
-.footer-nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.footer-nav ul {
-  margin: 2rem 0;
-  list-style: none;
-}
-
-.footer-nav ul li + li {
-  margin-top: 1rem;
-}
-
-.footer-nav ul a {
-  font-size: 0.9rem;
 }
 
 .copy-write {
@@ -442,8 +422,14 @@ footer .footer-content {
   text-align: center;
 }
 
+@media screen and (max-width: 400px) {
+  .footer-social-media i {
+    display: none;
+  }
+}
+
 .header-container {
-  padding: 0.5rem 0;
+  padding: 0.9rem 0;
 }
 
 .header-container nav {
@@ -480,7 +466,6 @@ footer .footer-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: inline-block;
 }
 
 .header-container nav ul li a:hover {
@@ -991,7 +976,7 @@ header .header-nav {
   color: white;
   font-weight: 400;
   letter-spacing: 3px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: relative;
 }
 
@@ -1001,7 +986,7 @@ header .header-nav {
   width: 2rem;
   background: white;
   position: absolute;
-  top: 12px;
+  top: 14px;
   margin-left: 0.2rem;
 }
 
