@@ -1,276 +1,290 @@
 @import "./default_styles";
 .portfolio {
-	padding: 5rem 0;
+  padding: 5rem 0;
 
-	.project-container {
-		width: 100%;
-	}
-	.project-1,
-	.project-2,
-	.project-3 {
-		position: relative;
-		height: 290px;
-		width: 95%;
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-		margin: 7rem 0;
-		padding: 0 1rem;
+  .project-container {
+    width: 100%;
+  }
+  .project-1,
+  .project-2,
+  .project-3,
+  .project-4 {
+    position: relative;
+    height: 290px;
+    width: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 7rem 0;
+    padding: 0 1rem;
 
-		strong {
-			display: none;
-		}
-	}
-	.project-1-content,
-	.project-2-content,
-	.project-3-content {
-		z-index: 500;
-		padding-left: 1rem;
+    strong {
+      display: none;
+    }
+  }
+  .project-1-content,
+  .project-2-content,
+  .project-3-content,
+  .project-4-content {
+    z-index: 500;
+    padding-left: 1rem;
 
-		h3 {
-			font-size: 1.4rem;
-			margin-bottom: 0.8rem;
-		}
+    h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
 
-		p {
-			font-size: 1.1rem;
+    p {
+      font-size: 1.1rem;
 
-			a {
-				color: $text-color;
-				border-bottom: 1px solid $gold-color;
-			}
+      a {
+        color: $text-color;
+        border-bottom: 1px solid $gold-color;
+      }
 
-			span {
-				background: $secondary-color;
-				cursor: not-allowed;
-				padding: 0.5rem 1.5rem;
-				display: inline-block;
-				margin: 0.5rem 0;
-				font-size: 0.8rem;
-			}
-		}
+      span {
+        background: $secondary-color;
+        cursor: not-allowed;
+        padding: 0.5rem 1.5rem;
+        display: inline-block;
+        margin: 0.5rem 0;
+        font-size: 0.8rem;
+      }
+    }
 
-		.project-info-btn {
-			margin-top: 1.5rem;
+    .project-info-btn {
+      margin-top: 1.5rem;
 
-			a {
-				background-color: $gold-color;
-				color: $secondary-color;
-				padding: 0.5rem 1rem;
-				margin-right: 1rem;
-				transition: 0.5s ease-in-out;
-			}
-			a:hover {
-				background: $secondary-color;
-				color: $text-color;
-				transition: 0.5s ease-in-out;
-			}
-		}
-	}
+      a {
+        background-color: $gold-color;
+        color: $secondary-color;
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        transition: 0.5s ease-in-out;
+      }
+      a:hover {
+        background: $secondary-color;
+        color: $text-color;
+        transition: 0.5s ease-in-out;
+      }
+    }
+  }
 
-	.project-1::before,
-	.project-2::before,
-	.project-3::before {
-		content: "";
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		top: 0;
-		left: 0;
-		display: block;
-		background-color: $secondary-color;
-		opacity: 0.8;
-		z-index: 1;
-	}
-	.project-1 {
-		background-image: url("/images/starbuck.png");
-	}
-	.project-2 {
-		background-image: url("/images/room.png");
-	}
-	.project-3 {
-		background-image: url("/images/clipboard.png");
-	}
+  .project-1::before,
+  .project-2::before,
+  .project-3::before,
+  .project-4::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: $secondary-color;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  .project-1 {
+    background-image: url("/images/starbuck.png");
+  }
+  .project-2 {
+    background-image: url("/images/room.png");
+  }
+  .project-3 {
+    background-image: url("/images/clipboard.png");
+  }
 
-	.portfolio-title {
-		font-weight: 400;
-		letter-spacing: 3px;
+  .project-4 {
+    background-image: url("/images/desktop-design.jpg");
+  }
 
-		.recent-work {
-			margin-bottom: 1rem;
-			font-size: 1rem;
-			color: $gold-color;
-			position: relative;
-			padding-left: 4rem;
-		}
+  .portfolio-title {
+    font-weight: 400;
+    letter-spacing: 3px;
 
-		.recent-work::before {
-			content: "";
-			height: 1px;
-			width: 3rem;
-			background: $gold-color;
-			position: absolute;
-			left: 0;
-			top: 10px;
-		}
+    .recent-work {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: $gold-color;
+      position: relative;
+      padding-left: 4rem;
+    }
 
-		p {
-			font-size: 2rem;
-			margin: 2rem 0;
-		}
-	}
+    .recent-work::before {
+      content: "";
+      height: 1px;
+      width: 3rem;
+      background: $gold-color;
+      position: absolute;
+      left: 0;
+      top: 10px;
+    }
 
-	.view-more-projects {
-		text-align: center;
+    p {
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+  }
 
-		input {
-			cursor: pointer;
-			padding: 1.5rem 1.7rem;
-			margin-top: 3rem;
-			border-radius: 2px;
-			border: none;
-			font-size: 1.2rem;
-			font-weight: 600;
-			border: 1px solid $gold-color;
-			color: $text-color;
-			background: transparent;
-			transition: all 0.5s ease-out;
-		}
+  .view-more-projects {
+    text-align: center;
 
-		input:hover {
-			background: transparent;
-			border: 1px solid $text-color;
-			color: $text-color;
-			transition: all 0.5s ease-in;
-		}
-	}
+    input {
+      cursor: pointer;
+      padding: 1.5rem 1.7rem;
+      margin-top: 3rem;
+      border-radius: 2px;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: 1px solid $gold-color;
+      color: $text-color;
+      background: transparent;
+      transition: all 0.5s ease-out;
+    }
+
+    input:hover {
+      background: transparent;
+      border: 1px solid $text-color;
+      color: $text-color;
+      transition: all 0.5s ease-in;
+    }
+  }
 }
 
 @media screen and (min-width: 700px) {
-	.portfolio {
-		.portfolio-title {
-			.recent-work {
-				p {
-					width: 80%;
-				}
-			}
-		}
-		.project-1,
-		.project-2,
-		.project-3 {
-			height: 420px;
-			width: 95%;
+  .portfolio {
+    .portfolio-title {
+      .recent-work {
+        p {
+          width: 80%;
+        }
+      }
+    }
+    .project-1,
+    .project-2,
+    .project-3,
+    .project-4 {
+      height: 420px;
+      width: 95%;
 
-			strong {
-				display: block;
-				z-index: 500;
-				position: absolute;
-				top: -42px;
-				right: 10px;
-				font-size: 7rem;
-			}
-		}
-		.project-2 {
-			justify-content: flex-end;
-			strong {
-				left: 10px;
-			}
-		}
+      strong {
+        display: block;
+        z-index: 500;
+        position: absolute;
+        top: -42px;
+        right: 10px;
+        font-size: 7rem;
+      }
+    }
+    .project-2 {
+      justify-content: flex-end;
+      strong {
+        left: 10px;
+      }
+    }
 
-		.project-1-content,
-		.project-2-content,
-		.project-3-content {
-			h3 {
-				font-size: 2rem;
-			}
-			p {
-				font-size: 1.2rem;
-			}
-		}
-	}
+    .project-1-content,
+    .project-2-content,
+    .project-3-content,
+    .project-4-content {
+      h3 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 1000px) {
-	.portfolio {
-		.portfolio-title {
-			p {
-				font-size: 3rem;
-			}
-		}
-		.project-1,
-		.project-2,
-		.project-3 {
-			height: 420px;
-			width: 80%;
-			padding: 0 3rem;
+  .portfolio {
+    .portfolio-title {
+      p {
+        font-size: 3rem;
+      }
+    }
+    .project-1,
+    .project-2,
+    .project-3,
+    .project-4 {
+      height: 420px;
+      width: 80%;
+      padding: 0 3rem;
 
-			strong {
-				top: -60px;
-				right: 10px;
-				font-size: 10rem;
-				opacity: 0;
-				transition: all 0.5s ease-in-out;
-				transform: translateY(30%);
-			}
-		}
-		.project-1::after,
-		.project-2::after,
-		.project-3::after {
-			content: "";
-			position: absolute;
-			top: 0;
-			opacity: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: $primary-color;
-			background: linear-gradient(270deg, $gold-color, $gold-color);
-			background-image: linear-gradient(270deg, $secondary-color, $secondary-color);
-			transform: translateX(-100%);
-			transition: transform 0.5s ease-in-out;
-		}
+      strong {
+        top: -60px;
+        right: 10px;
+        font-size: 10rem;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(30%);
+      }
+    }
+    .project-1::after,
+    .project-2::after,
+    .project-3::after,
+    .project-4::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      opacity: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $primary-color;
+      background: linear-gradient(270deg, $gold-color, $gold-color);
+      background-image: linear-gradient(270deg, $secondary-color, $secondary-color);
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out;
+    }
 
-		.project-1:hover.project-1::after,
-		.project-2:hover.project-2::after,
-		.project-3:hover.project-3::after {
-			opacity: 0.5;
-			transform: translateX(0);
-			transition: transform 0.5s ease-in-out;
-		}
+    .project-1:hover.project-1::after,
+    .project-2:hover.project-2::after,
+    .project-3:hover.project-3::after,
+    .project-4:hover.project-4::after {
+      opacity: 0.5;
+      transform: translateX(0);
+      transition: transform 0.5s ease-in-out;
+    }
 
-		.project-1:hover strong,
-		.project-2:hover strong,
-		.project-3:hover strong {
-			opacity: 1;
-			transform: translateY(0);
-			transition: all 0.5s ease-in-out;
-		}
+    .project-1:hover strong,
+    .project-2:hover strong,
+    .project-3:hover strong,
+    .project-4:hover strong {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease-in-out;
+    }
 
-		.project-2 {
-			justify-content: flex-end;
-			margin-left: auto;
-			strong {
-				left: 10px;
-			}
-		}
+    .project-2 {
+      justify-content: flex-end;
+      margin-left: auto;
+      strong {
+        left: 10px;
+      }
+    }
 
-		.project-1-content,
-		.project-2-content,
-		.project-3-content {
-			h3 {
-				font-size: 2.3rem;
-			}
-			p {
-				font-size: 1.2rem;
-				margin: 1rem 0;
+    .project-1-content,
+    .project-2-content,
+    .project-3-content,
+    .project-4-content {
+      h3 {
+        font-size: 2.3rem;
+      }
+      p {
+        font-size: 1.2rem;
+        margin: 1rem 0;
 
-				span {
-					font-size: inherit;
-				}
-			}
-		}
-	}
+        span {
+          font-size: inherit;
+        }
+      }
+    }
+  }
 }
